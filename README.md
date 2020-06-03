@@ -1,6 +1,13 @@
 # Intelligent Manager of Fantasy Premier League Game - User Manual
 
+## Contents
+This is a list of all the contents of this directory:
 
+- code-sources/backend-application: source code of the server
+- code-sources/frontend-application: source code of the web application
+- thesis-sources/: LaTeX source code files
+- thesis.pdf: the text of the thesis
+- README.md: this document
 
 ## About
 This application can be used to help and support user while playing the [Fantasy Premier League](https://fantasy.premierleague.com/) official application.
