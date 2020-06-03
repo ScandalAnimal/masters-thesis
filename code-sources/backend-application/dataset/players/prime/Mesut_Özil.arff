@@ -1,0 +1,31 @@
+@relation Mesut_Özil
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+135,3,12,17.8,0,7.6,2.5,90,72,0,0,0,0,0,0,True,12
+136,2,2,5,0,3.6,0.9,69,72,0,0,0,0,1,0,False,7
+137,2,17,53.3,2,17,7.2,90,72,0,0,0,0,1,0,True,15
+138,1,9,3.1,0,4.4,0.8,54,72,0,0,0,0,1,0,False,6
+139,2,11,27.8,12,5.8,4.6,62,72,0,0,1,0,0,0,False,5
+140,8,32,47.6,21,45.6,11.4,90,72,1,0,0,0,0,0,True,13
+141,2,13,18.1,2,6.6,2.7,81,72,0,0,0,0,2,0,True,8
+142,6,23,18.1,28,19.4,6.6,88,72,0,1,0,0,0,0,True,19

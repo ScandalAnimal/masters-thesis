@@ -1,0 +1,31 @@
+@relation 'David_de Gea'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,7,26,0,0,18,1.8,90,54,0,0,0,0,0,3,True,14
+99,1,11,0,0,16.8,1.7,90,54,0,0,1,0,2,3,False,10
+100,1,10,0,0,3.4,0.3,90,54,0,0,0,0,2,0,True,5
+101,7,25,0,0,26,2.6,90,54,0,0,0,0,0,3,True,20
+102,6,21,0,0,10,1,90,54,0,0,0,0,0,1,False,6
+103,6,24,0,0,15.6,1.6,90,54,0,0,0,0,0,2,True,18
+104,3,12,0,0,28,2.8,90,54,0,0,0,0,1,4,False,8
+105,9,27,0,0,26.4,2.6,90,54,0,0,0,0,0,4,True,11

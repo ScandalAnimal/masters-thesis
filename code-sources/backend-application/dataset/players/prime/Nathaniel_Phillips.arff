@@ -1,0 +1,31 @@
+@relation Nathaniel_Phillips
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+3,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,12
+4,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,20
+5,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,19
+6,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,16
+7,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,14
+8,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,19
+9,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,18
+10,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,3

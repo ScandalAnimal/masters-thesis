@@ -1,0 +1,31 @@
+@relation Eric_Garcia
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+16,2,15,1.8,0,19.2,2.1,90,45,0,0,0,0,1,0,True,8
+17,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,2
+18,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,7
+19,1,4,0,0,3,0.3,12,45,0,0,0,0,0,0,False,15
+20,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,17
+21,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,19
+22,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,9
+23,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,12

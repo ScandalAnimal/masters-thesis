@@ -1,0 +1,31 @@
+@relation Mason_Holgate
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,7,30,0.3,4,21.4,2.6,90,44,0,0,0,0,0,0,True,4
+137,8,32,10.7,2,51.4,6.4,90,44,0,1,0,0,1,0,False,19
+138,1,17,0.3,7,24.8,3.2,90,45,0,0,0,0,2,0,True,13
+139,3,21,1.8,33,17.6,5.2,90,45,0,1,1,0,2,0,False,18
+140,1,3,0.3,0,0.4,0.1,4,45,0,0,0,0,0,0,True,7
+141,1,17,1,0,16,1.7,90,45,0,0,0,0,3,0,False,1
+142,2,7,0,2,9.6,1.2,90,44,0,0,0,0,1,0,True,12
+143,-1,16,0.6,0,17,1.8,90,44,0,0,1,0,4,0,False,6

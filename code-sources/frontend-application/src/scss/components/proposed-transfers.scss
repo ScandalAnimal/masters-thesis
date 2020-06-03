@@ -1,0 +1,43 @@
+@import '../atoms/variables';
+
+.proposed-transfers-description {
+  color: $color-darkgrey;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.proposed-transfers-card__index {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.proposed-transfers-card__wrapper {
+  border: 2px solid $color-egg;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+}
+
+.proposed-transfers-card__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.proposed-transfers-card__item {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 10px;
+}
+
+.proposed-transfers-card__title {
+  color: $color-darkgrey;
+}
+
+.proposed-transfers-card__number {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.proposed-transfers-card__button {
+  margin: 20px auto;
+}

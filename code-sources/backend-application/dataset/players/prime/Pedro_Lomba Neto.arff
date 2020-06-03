@@ -1,0 +1,31 @@
+@relation 'Pedro_Lomba Neto'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+22,2,7,6.3,45,5.2,5.7,84,50,0,0,0,0,1,0,True,13
+23,7,26,19.4,18,36.2,7.4,85,50,1,0,0,0,2,0,False,16
+24,2,8,7.9,24,3.2,3.5,76,50,0,0,0,0,1,0,True,10
+25,1,1,11,4,2.6,1.8,20,50,0,0,0,0,0,0,False,12
+26,3,7,37,6,8.4,5.1,63,50,0,0,0,0,0,0,True,9
+27,1,0,1.6,2,0,0.4,26,50,0,0,0,0,0,0,True,14
+28,1,1,11.1,0,3.6,1.5,16,50,0,0,0,0,0,0,False,17
+29,0,0,0,0,0,0,0,50,0,0,0,0,0,0,True,4

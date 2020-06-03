@@ -1,0 +1,41 @@
+@import '../atoms/variables';
+
+.card {
+  padding: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: $color-opal;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $screen-lg) {
+    padding: 2.5rem 2.5rem 2rem;
+  }
+}
+
+.card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 18px;
+}
+
+.card__title {
+  color: $color-darkgrey;
+  font-weight: 300;
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__filler {
+  display: block;
+  width: 32px;
+  cursor: pointer;
+
+  &--inactive {
+    cursor: default;
+  }
+}

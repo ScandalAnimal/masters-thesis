@@ -1,0 +1,31 @@
+@relation 'André Filipe_Tavares Gomes'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+60,0,0,0,0,0,0,0,52,0,0,0,0,0,0,True,4
+61,0,0,0,0,0,0,0,52,0,0,0,0,0,0,False,19
+62,0,0,0,0,0,0,0,52,0,0,0,0,0,0,True,13
+63,0,0,0,0,0,0,0,52,0,0,0,0,0,0,False,18
+64,0,0,0,0,0,0,0,52,0,0,0,0,0,0,True,7
+65,0,0,4.3,4,1.2,1,31,52,0,0,1,0,0,0,False,1
+66,2,12,2.2,8,7.4,1.8,81,52,0,0,0,0,1,0,True,12
+67,1,10,3.3,0,5.4,0.9,90,52,0,0,1,0,4,0,False,6

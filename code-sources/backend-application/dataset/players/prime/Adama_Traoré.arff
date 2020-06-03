@@ -1,0 +1,31 @@
+@relation Adama_Traoré
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+95,2,11,26.4,6,14.6,4.7,90,57,0,0,0,0,1,0,True,13
+96,10,35,26.5,20,44,9.1,90,57,0,2,0,0,2,0,False,16
+97,5,30,40.3,22,27.6,9,90,57,0,1,0,0,2,0,True,10
+98,3,8,30.4,24,9.4,6.4,75,58,0,0,0,0,0,0,False,12
+99,1,6,24.9,27,12,6.4,26,58,0,0,0,0,0,0,True,9
+100,1,1,0.7,1,0.2,0.2,18,58,0,0,0,0,0,0,True,14
+101,2,8,19.4,10,5.6,3.5,73,59,0,0,0,0,2,0,False,17
+102,1,8,11,4,7.4,2.2,26,58,0,0,0,0,0,0,True,4

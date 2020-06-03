@@ -1,0 +1,52 @@
+@relation Che_Adams
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+1,2,-5,1.8,21,0,1.6,72,60,0,0,0,0,2,0,False,5
+2,2,4,12.2,16,0.2,2.8,67,60,0,0,0,0,1,0,True,10
+3,2,4,13,56,5.4,7.4,79,59,0,0,0,0,0,0,False,4
+4,2,3,12.8,10,1,2.4,61,58,0,0,0,0,1,0,True,12
+5,2,3,12.6,52,6,7.1,90,58,0,0,0,0,0,0,False,15
+6,5,17,23.5,12,4.2,4,76,57,0,1,0,0,2,0,True,3
+7,0,0,0,0,0,0,0,57,0,0,0,0,0,0,False,17
+8,1,0,0,4,0,0.2,9,56,0,0,0,0,1,0,True,6
+9,0,0,0,0,0,0,0,56,0,0,0,0,0,0,False,20
+10,0,0,0,0,0,0,0,55,0,0,0,0,0,0,True,9
+11,1,3,1.1,0,0,0.1,2,55,0,0,0,0,0,0,False,11
+12,1,2,0,0,0,0,9,55,0,0,0,0,0,0,True,8
+13,0,0,0,0,0,0,0,54,0,0,0,0,0,0,False,1
+14,0,0,0,0,0,0,0,54,0,0,0,0,0,0,True,18
+15,1,1,1.6,2,0,0.3,13,54,0,0,0,0,0,0,True,14
+16,1,3,0.1,0,0,0,2,54,0,0,0,0,0,0,False,13
+17,1,3,0,0,0,0,3,54,0,0,0,0,0,0,True,19
+18,1,1,0,0,0,0,3,54,0,0,0,0,0,0,False,2
+19,2,5,1,0,7.6,0.9,79,53,0,0,0,0,0,0,False,6
+20,2,10,17.7,4,7.2,2.9,62,53,0,0,0,0,1,0,True,7
+21,0,0,0,0,0,0,0,53,0,0,0,0,0,0,True,17
+22,4,14,13.1,0,15.2,2.8,12,53,0,1,0,0,0,0,False,9
+23,1,1,1.7,2,0,0.3,19,53,0,0,0,0,1,0,True,20
+24,1,3,10.3,0,1.2,1.2,6,53,0,0,0,0,0,0,False,7
+25,1,2,1.8,8,1.2,1.1,20,53,0,0,0,0,2,0,False,10
+26,1,4,0,0,1,0.1,4,53,0,0,0,0,0,0,True,5
+27,4,14,13.3,27,16.6,5.7,17,53,0,1,0,0,0,0,True,2
+28,0,0,0,0,0,0,0,53,0,0,0,0,0,0,False,19
+29,1,3,0,0,0,0,13,53,0,0,0,0,1,0,True,13

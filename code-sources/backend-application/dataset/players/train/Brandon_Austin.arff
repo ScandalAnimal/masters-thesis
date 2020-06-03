@@ -1,0 +1,44 @@
+@relation Brandon_Austin
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+1,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,18
+2,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,10
+3,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,8
+4,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,15
+5,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,19
+6,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,3
+7,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,12
+8,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,5
+9,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,20
+10,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,6
+11,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,4
+12,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,14
+13,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,16
+14,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,10
+15,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,18
+16,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,14
+17,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,11
+18,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,2
+19,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,6
+20,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,20
+21,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,5

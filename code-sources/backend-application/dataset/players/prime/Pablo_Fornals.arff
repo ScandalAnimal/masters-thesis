@@ -1,0 +1,31 @@
+@relation Pablo_Fornals
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+22,1,5,5.1,17,5.6,2.8,59,60,0,0,0,0,1,0,True,8
+23,1,5,3.9,0,6.4,1,45,60,0,0,0,0,2,0,False,9
+24,1,1,0,4,0,0.2,21,60,0,0,0,0,0,0,True,10
+25,1,4,0.3,0,1.2,0.2,5,60,0,0,0,0,0,0,True,4
+26,0,0,0,0,0,0,0,60,0,0,0,0,0,0,False,11
+27,6,20,4.3,17,32.4,5.4,43,60,1,0,0,0,2,0,False,10
+28,9,34,24.9,20,43.4,8.8,90,60,0,2,0,0,1,0,True,16
+29,1,9,11.8,29,10.4,5.1,86,60,0,0,1,0,1,0,False,1

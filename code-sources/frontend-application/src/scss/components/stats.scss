@@ -1,0 +1,74 @@
+@import '../atoms/variables';
+
+.all-stats {
+  .table {
+    width: 100%;
+  }
+
+  .all-stats-name {
+    width: 20%;
+  }
+
+  .all-stats-team {
+    width: 20%;
+  }
+
+  .all-stats-bps,
+  .all-stats-selected,
+  .all-stats-points {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.all-stats-selectbox-wrapper {
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.unavailable-selectbox-wrapper {
+  width: 50%;
+
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.unavailable {
+  .table {
+    width: 100%;
+  }
+
+  .unavailable-name {
+    width: 20%;
+  }
+
+  .unavailable-team {
+    width: 20%;
+  }
+
+  .unavailable-news {
+    width: 40%;
+    display: flex;
+  }
+
+  .unavailable-cards {
+    width: 20%;
+    text-align: right;
+  }
+}
+
+.unavailable-top {
+  display: flex;
+}
+
+.unavailable-checkboxes {
+  display: flex;
+  align-items: flex-end;
+}

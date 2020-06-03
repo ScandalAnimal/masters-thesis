@@ -1,0 +1,121 @@
+@import '../atoms/variables';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 0;
+  background-color: $color-egg;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+
+.nav-icon {
+  margin: 1em;
+  width: 40px;
+  display: none;
+  cursor: pointer;
+
+  @media screen and (max-width: $screen-md) {
+    display: block;
+  }
+}
+
+.nav-hamburger {
+  display: none;
+
+  @media screen and (max-width: $screen-md) {
+    display: flex;
+  }
+}
+
+.nav-icon::after,
+.nav-icon::before,
+.nav-icon div {
+  background-color: $color-ash;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link {
+  display: flex;
+
+  @media screen and (max-width: $screen-md) {
+    display: none;
+  }
+}
+
+.nav-hidden {
+  display: none;
+
+  &--opened {
+    @media screen and (max-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    div {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.homepage-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  box-shadow: $box-shadow-lg;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.homepage-logo-bottom {
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 300px;
+    width: 450px;
+  }
+}
+
+.login-bottom-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.login-bottom-col {
+  padding: 0 20px;
+}
+
+.login-bottom-right {
+  padding-left: 50px;
+}
+
+.login-bottom-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-dark;
+  font-size: 36px;
+  line-height: 1.15;
+  margin-bottom: 30px;
+}
+
+.login-bottom-text {
+  color: $color-ash;
+  font-size: 16px;
+  padding: 0 25px;
+}

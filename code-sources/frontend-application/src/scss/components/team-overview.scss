@@ -1,0 +1,385 @@
+@import '../atoms/variables';
+
+.football-field-wrapper {
+  height: 600px;
+  transform: translateZ(-210px);
+  transform-style: preserve-3d;
+}
+
+.football-field-team {
+  transform-style: preserve-3d;
+  z-index: 2;
+}
+
+.football-field-terrain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: inherit;
+}
+
+.field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  z-index: 2;
+  box-sizing: content-box;
+  backface-visibility: hidden;
+}
+
+.field__texture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+.field__texture.field__texture--gradient {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+  z-index: 4;
+}
+
+.field__texture.field__texture--gradient-b {
+  opacity: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+  z-index: 4;
+}
+
+.field__texture.field__texture--grass {
+  background-image: url("../../assets/images/grass2.png");
+  background-repeat: repeat;
+  background-size: 75px 75px;
+  background-position: -20px -20px;
+}
+
+.field__line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  z-index: 4;
+}
+
+.field__line--goal {
+  width: 16%;
+  height: 6%;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  border-bottom: none;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 4%;
+}
+
+.field__line--goal--far {
+  top: 4%;
+  bottom: auto;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  border-top: none;
+}
+
+.field__line--penalty-arc {
+  width: 20%;
+  height: 15%;
+  overflow: hidden;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.field__line--penalty-arc::after {
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  content: ' ';
+  display: block;
+  border-radius: 50% 50% 0 0;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  border-bottom: none;
+  box-sizing: border-box;
+}
+
+.field__line--penalty-arc--far {
+  bottom: auto;
+  top: 20%;
+}
+
+.field__line--penalty-arc--far::after {
+  bottom: 75%;
+  top: auto;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  border-top: none;
+  border-radius: 0 0 50% 50%;
+}
+
+.field__line--penalty {
+  width: 44%;
+  height: 16%;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  border-bottom: none;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 4%;
+}
+
+.field__line--penalty--far {
+  top: 4%;
+  bottom: auto;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  border-top: none;
+}
+
+.field__line--outline {
+  width: 92%;
+  height: 92%;
+  top: 4%;
+  left: 4%;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+}
+
+.field__line--mid {
+  top: 50%;
+  width: 92%;
+  left: 4%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.field__line--circle {
+  width: 20%;
+  height: 15%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  background-size: 100% auto;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.player .player__label div {
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 0 2px 0;
+  text-transform: uppercase;
+}
+
+.player .player__img {
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player .player__img img {
+  width: 65px;
+  height: 65px;
+  transition: all 0.2s;
+  display: block;
+}
+
+.player .player__label {
+  height: 20px;
+  width: 65px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.player:hover .player__img {
+  opacity: 1;
+  width: 80px;
+  height: 80px;
+}
+
+.player:hover .player__label {
+  opacity: 1;
+  width: 80px;
+}
+
+.players {
+  font-size: 25px;
+}
+
+.players-row {
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.player-detail-popup-title {
+  text-transform: uppercase;
+  color: $color-darkgrey;
+  font-weight: 300;
+}
+
+.player-detail-popup-body {
+  color: $color-black;
+}
+
+.player-detail-popup-body__wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.player-detail-popup-button-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .button {
+    width: 100%;
+  }
+}
+
+.player-detail-popup__subs {
+  background-color: $color-brown;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 13px;
+}
+
+.player .player__options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 20px;
+  margin-top: 5px;
+}
+
+.player .player__option-captain {
+  display: flex;
+  width: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: $color-lynch;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.player .player__option-unavailable {
+  display: flex;
+  width: 19px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: $color-red;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacing {
+  height: 20px;
+}
+
+.removed-players-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.reset-changes-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.bench-wrapper {
+  margin-top: 15px;
+  background-color: $color-brandy;
+}
+
+.player-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  background-size: 100% auto;
+}
+
+.player-small .player-small__label div {
+  color: $color-black;
+  font-size: 11px;
+  padding: 3px 0 2px 0;
+  text-transform: uppercase;
+}
+
+.player-small .player-small__img {
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-small .player-small__img img {
+  width: 65px;
+  height: 65px;
+  transition: all 0.2s;
+  display: block;
+}
+
+.player-small .player-small__label {
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.team-overview-cost {
+  color: $color-darkgrey;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.history-item {
+  width: 8%;
+  text-align: left;
+}
+
+.player-history-no-data {
+  margin-top: 40px;
+  color: $color-darkgrey;
+  text-align: center;
+}
+
+.injury-status {
+  color: $color-red;
+  display: flex;
+  border: 1px solid $color-red;
+  padding: 10px 20px;
+  justify-content: center;
+}

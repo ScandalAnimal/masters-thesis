@@ -1,0 +1,31 @@
+@relation Nampalys_Mendy
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+135,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,16
+136,2,17,2.3,7,17.2,2.7,90,43,0,0,0,0,2,0,False,5
+137,1,12,16.6,2,8,2.7,33,43,0,0,0,0,0,0,True,19
+138,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,6
+139,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,20
+140,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,11
+141,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,14
+142,1,4,0.6,0,0.6,0.1,7,43,0,0,0,0,0,0,True,2

@@ -1,0 +1,31 @@
+@relation Kasper_Schmeichel
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,4,24,0,0,48.8,4.9,90,54,0,0,0,0,2,7,True,16
+137,2,14,0,0,24,2.4,90,54,0,0,0,0,2,3,False,5
+138,1,7,0,0,12,1.2,90,54,0,0,1,0,1,1,True,19
+139,1,13,0,0,14.2,1.4,90,54,0,0,0,0,2,1,True,6
+140,7,25,0,0,23.6,2.4,90,54,0,0,0,0,0,3,False,20
+141,12,36,0,0,66,6.6,90,53,0,0,0,0,1,6,True,11
+142,2,15,0,0,38,3.8,90,53,0,0,1,0,1,5,False,14
+143,6,26,0,0,10,1,90,53,0,0,0,0,0,1,True,2

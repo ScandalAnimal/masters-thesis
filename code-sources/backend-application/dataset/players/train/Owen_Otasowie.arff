@@ -1,0 +1,39 @@
+@relation Owen_Otasowie
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+1,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,15
+2,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,19
+3,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,4
+4,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,17
+5,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,14
+6,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,11
+7,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,10
+8,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,18
+9,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,13
+10,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,16
+11,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,10
+12,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,12
+13,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,9
+14,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,14
+15,0,0,0,0,0,0,0,45,0,0,0,0,0,0,False,17
+16,0,0,0,0,0,0,0,45,0,0,0,0,0,0,True,4

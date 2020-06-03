@@ -1,0 +1,31 @@
+@relation 'Francisco_Femenía Far'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,0,0,0,0,0,0,0,42,0,0,0,0,0,0,False,3
+99,0,0,0,0,0,0,0,42,0,0,0,0,0,0,True,17
+100,0,0,0,0,0,0,0,42,0,0,0,0,0,0,False,2
+101,0,0,0,0,0,0,0,42,0,0,0,0,0,0,True,8
+102,0,0,0,0,0,0,0,42,0,0,0,0,0,0,False,4
+103,0,0,0,0,0,0,0,42,0,0,0,0,0,0,False,12
+104,6,22,1.6,0,10.8,1.2,90,42,0,0,0,0,0,0,True,10
+105,1,10,7.1,0,24.6,3.2,90,42,0,0,1,0,1,0,False,7

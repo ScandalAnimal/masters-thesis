@@ -1,0 +1,31 @@
+@relation Anthony_Martial
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,8,20,3.6,69,36.8,10.9,79,79,1,0,0,0,0,0,True,14
+137,2,0,6.1,16,5.8,2.8,90,79,0,0,0,0,2,0,False,10
+138,2,6,34.6,37,10.4,8.2,90,79,0,0,0,0,2,0,True,5
+139,3,8,16.1,12,5.8,3.4,90,79,0,0,0,0,0,0,True,20
+140,8,20,2.9,41,31.8,7.6,90,79,1,0,0,0,0,0,False,6
+141,8,20,13.1,41,41.8,9.6,79,79,1,0,0,0,0,0,True,18
+142,2,5,2.4,24,0.8,2.7,88,80,0,0,0,0,1,0,False,8
+143,8,23,1.7,85,42.4,12.9,77,79,1,0,0,0,0,0,True,11

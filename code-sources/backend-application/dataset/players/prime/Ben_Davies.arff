@@ -1,0 +1,31 @@
+@relation Ben_Davies
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,0,0,0,0,0,0,0,53,0,0,0,0,0,0,True,10
+137,0,0,0,0,0,0,0,53,0,0,0,0,0,0,False,18
+138,0,0,0,0,0,0,0,53,0,0,0,0,0,0,True,14
+139,0,0,0,0,0,0,0,53,0,0,0,0,0,0,True,11
+140,1,22,11.2,2,43.2,5.6,90,53,0,0,0,0,2,0,False,2
+141,1,7,1.4,0,20.6,2.2,90,53,0,0,0,0,2,0,False,6
+142,0,12,30.5,22,9.6,6.2,90,53,0,0,1,0,3,0,True,20
+143,0,0,0,0,0,0,0,53,0,0,0,0,0,0,False,5

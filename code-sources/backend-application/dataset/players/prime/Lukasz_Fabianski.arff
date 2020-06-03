@@ -1,0 +1,31 @@
+@relation Lukasz_Fabianski
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,0,0,0,0,0,0,0,49,0,0,0,0,0,0,True,8
+137,0,0,0,0,0,0,0,49,0,0,0,0,0,0,False,9
+138,2,16,0,0,23,2.3,90,49,0,0,0,0,2,3,True,10
+139,2,13,0,0,26.6,2.7,90,49,0,0,0,0,3,4,True,4
+140,2,21,0,0,31,3.1,90,49,0,0,0,0,2,5,False,11
+141,2,14,0,0,26.6,2.7,90,49,0,0,0,0,3,4,False,10
+142,2,9,0,0,5,0.5,90,49,0,0,0,0,1,1,True,16
+143,2,12,0,0,10.6,1.1,90,49,0,0,0,0,1,1,False,1

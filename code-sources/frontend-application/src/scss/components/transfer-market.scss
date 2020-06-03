@@ -1,0 +1,119 @@
+@import '../atoms/variables';
+
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; /* demo only */
+}
+
+.custom-dropdown select {
+  background-color: $color-brown;
+  color: $color-darkgrey;
+  font-size: inherit;
+  padding: 0.5em 2.5em 0.5em 0.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: none; /* hide default arrow in chrome OSX */
+}
+
+.custom-dropdown label {
+  color: $color-darkgrey;
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: 0.625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 72%;
+  margin-top: -0.5em;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 32px;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+
+  li {
+    margin: 5px;
+    color: $color-darkgrey;
+    background-color: $color-brown;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  li.pagination-active {
+    color: $color-darkgrey;
+    border: 1px solid $color-darkgrey;
+  }
+
+  li.break-me {
+    cursor: auto;
+    background-color: $color-brown;
+  }
+}
+
+.player-row {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+  color: $color-darkgrey;
+  background-color: $color-egg;
+  cursor: pointer;
+}
+
+.player-row:hover {
+  background-color: $color-brown;
+}
+
+.player-row-heading {
+  cursor: default;
+  background-color: $color-brandy;
+}
+
+.player-row-heading:hover {
+  background-color: $color-brandy;
+}
+
+.player-list {
+  margin-top: 40px;
+}

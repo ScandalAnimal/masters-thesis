@@ -1,0 +1,31 @@
+@relation Benjamin_Chilwell
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,1,9,15,4,13.2,3.2,90,57,0,0,0,0,2,0,True,16
+137,0,0,0,0,0,0,0,57,0,0,0,0,0,0,False,5
+138,2,16,9.6,19,16.4,4.5,90,56,0,0,0,0,1,0,True,19
+139,7,25,16.1,25,45.6,8.7,90,56,1,0,0,0,2,0,True,6
+140,5,27,18.5,0,20.4,3.9,90,56,0,0,1,0,0,0,False,20
+141,2,3,1.7,2,7.6,1.1,90,56,0,0,0,0,1,0,True,11
+142,2,9,30,16,15.6,6.2,90,56,0,0,0,0,1,0,False,14
+143,0,0,0,0,0,0,0,56,0,0,0,0,0,0,True,2

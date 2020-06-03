@@ -1,0 +1,31 @@
+@relation Harvey_Barnes
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+45,1,3,1.7,7,3.8,1.3,57,59,0,0,0,0,1,0,True,16
+46,7,25,35.7,57,44.6,13.7,90,59,1,0,0,0,2,0,False,5
+47,12,41,45.2,59,64.8,16.9,82,59,1,1,0,0,1,0,True,19
+48,7,21,17.9,39,39.2,9.6,90,59,1,0,0,0,2,0,True,6
+49,3,7,4,18,3,2.5,90,60,0,0,0,0,0,0,False,20
+50,1,4,0.8,2,2.6,0.5,45,60,0,0,0,0,1,0,True,11
+51,2,11,49.8,46,18.6,11.4,90,60,0,0,0,0,1,0,False,14
+52,19,58,19,66,80.8,16.6,90,61,2,1,0,0,0,0,True,2

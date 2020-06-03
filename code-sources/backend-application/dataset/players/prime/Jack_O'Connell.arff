@@ -1,0 +1,31 @@
+@relation 'Jack_O\'Connell'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+21,1,18,15.2,2,23.8,4.1,90,46,0,0,0,0,2,0,False,10
+22,6,21,1.2,0,7.4,0.9,90,46,0,0,0,0,0,0,True,19
+23,2,11,11.3,9,13.4,3.4,90,46,0,0,0,0,1,0,False,1
+24,2,12,1.4,4,25,3,90,46,0,0,0,0,1,0,True,11
+25,7,23,5.8,0,13.4,1.9,90,46,0,0,0,0,0,0,False,7
+26,2,13,21.1,6,19.6,4.7,90,47,0,0,0,0,1,0,True,3
+27,2,18,31.8,20,19.2,7.1,90,47,0,0,0,0,1,0,True,4
+28,6,19,1.8,24,12.6,3.8,90,47,0,0,0,0,0,0,True,14

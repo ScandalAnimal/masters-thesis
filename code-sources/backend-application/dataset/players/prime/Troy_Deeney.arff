@@ -1,0 +1,31 @@
+@relation Troy_Deeney
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,7,31,43.5,46,50.4,14,90,62,1,0,1,0,0,0,False,3
+137,0,2,25.1,94,11,13,90,62,0,0,0,0,0,0,True,17
+138,9,25,14.4,70,40.2,12.5,90,62,1,0,0,0,2,0,False,2
+139,5,18,15,0,23,3.8,90,63,0,1,0,0,3,0,True,8
+140,2,5,3.2,21,9,3.3,90,63,0,0,0,0,1,0,False,4
+141,2,8,12.7,6,4.2,2.3,75,63,0,0,0,0,3,0,False,12
+142,11,34,11.2,40,55.6,10.7,90,62,1,1,0,0,0,0,True,10
+143,2,8,12.1,31,8.4,5.2,73,62,0,0,0,0,1,0,False,7

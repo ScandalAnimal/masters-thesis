@@ -1,0 +1,31 @@
+@relation Matteo_Darmian
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,0,0,0,0,0,0,0,49,0,0,0,0,0,0,True,14
+137,0,0,0,0,0,0,0,49,0,0,0,0,0,0,False,10
+138,0,0,0,0,0,0,0,49,0,0,0,0,0,0,True,5
+139,0,0,0,0,0,0,0,49,0,0,0,0,0,0,True,20
+140,0,0,0,0,0,0,0,49,0,0,0,0,0,0,False,6
+141,0,0,0,0,0,0,0,49,0,0,0,0,0,0,True,18
+142,0,0,0,0,0,0,0,49,0,0,0,0,0,0,False,8
+143,0,0,0,0,0,0,0,49,0,0,0,0,0,0,True,11

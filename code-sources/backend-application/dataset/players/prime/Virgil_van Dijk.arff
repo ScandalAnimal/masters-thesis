@@ -1,0 +1,31 @@
+@relation 'Virgil_van Dijk'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,15,44,0.4,21,55,7.6,90,64,1,0,0,0,0,0,True,12
+137,2,18,0.2,2,19.8,2.2,90,64,0,0,0,0,1,0,False,20
+138,6,27,1.6,0,20.6,2.2,90,64,0,0,0,0,0,0,False,19
+139,6,23,0.4,17,22,3.9,90,65,0,0,0,0,0,0,True,16
+140,6,24,2,21,9.2,3.2,90,65,0,0,0,0,0,0,False,14
+141,1,14,2.8,44,24.6,7.1,90,65,0,0,0,0,2,0,True,19
+142,1,16,14,1,24,3.9,90,66,0,0,0,0,3,0,False,18
+143,6,29,32.1,21,37.8,9.1,90,66,0,1,0,0,1,0,True,3

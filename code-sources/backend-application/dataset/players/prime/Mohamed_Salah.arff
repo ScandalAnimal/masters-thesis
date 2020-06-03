@@ -1,0 +1,31 @@
+@relation Mohamed_Salah
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,7,23,32.7,55,44.4,13.2,90,123,1,0,1,0,0,0,True,12
+99,2,12,18.5,86,10.8,11.5,84,124,0,0,0,0,1,0,False,20
+100,14,44,28.8,48,50,12.7,90,124,1,1,0,0,0,0,False,19
+101,16,48,32.5,100,80.6,21.3,90,126,2,0,0,0,0,0,True,16
+102,3,3,24.7,81,7.2,11.3,90,127,0,0,0,0,0,0,False,14
+103,7,27,15.3,112,47.2,17.5,90,128,1,0,0,0,2,0,True,19
+104,2,5,3.3,30,0,3.3,90,128,0,0,0,0,3,0,False,18
+105,9,35,44.8,44,48,13.7,90,128,1,0,0,0,1,0,True,3

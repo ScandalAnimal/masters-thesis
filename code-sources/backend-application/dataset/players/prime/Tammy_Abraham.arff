@@ -1,0 +1,31 @@
+@relation Tammy_Abraham
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,6,22,11.1,82,37.4,13.1,90,78,1,0,0,0,0,0,True,5
+99,2,-4,1.8,52,0,4.7,79,79,0,0,0,0,0,0,False,13
+100,5,14,11.9,40,10.2,6.2,90,78,0,1,0,0,2,0,True,1
+101,2,2,10.9,4,6.4,2.1,82,77,0,0,0,0,2,0,False,9
+102,0,0,0,0,0,0,0,77,0,0,0,0,0,0,True,12
+103,1,1,0.3,35,5,4,19,76,0,0,0,0,1,0,True,17
+104,0,0,0,0,0,0,0,76,0,0,0,0,0,0,False,3
+105,0,0,0,0,0,0,0,75,0,0,0,0,0,0,True,8

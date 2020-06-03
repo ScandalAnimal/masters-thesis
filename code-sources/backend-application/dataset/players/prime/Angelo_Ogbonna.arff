@@ -1,0 +1,31 @@
+@relation Angelo_Ogbonna
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,2,11,0.4,0,9.8,1,90,45,0,0,0,0,1,0,True,8
+137,-1,0,3,0,2.2,0.5,90,45,0,0,1,0,4,0,False,9
+138,1,6,0,7,16.8,2.4,90,45,0,0,0,0,2,0,True,10
+139,-2,2,0.3,2,1.8,0.4,90,45,0,0,1,0,3,0,True,4
+140,1,15,0.4,2,27.8,3,90,45,0,0,0,0,2,0,False,11
+141,1,14,0,0,16.8,1.7,90,45,0,0,0,0,3,0,False,10
+142,2,11,0.1,6,19.2,2.5,90,45,0,0,0,0,1,0,True,16
+143,2,11,0.3,8,11.2,2,90,45,0,0,0,0,1,0,False,1

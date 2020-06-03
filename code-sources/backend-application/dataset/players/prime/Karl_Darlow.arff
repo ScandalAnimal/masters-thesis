@@ -1,0 +1,31 @@
+@relation Karl_Darlow
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,20
+99,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,6
+100,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,8
+101,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,14
+102,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,1
+103,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,7
+104,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,5
+105,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,16

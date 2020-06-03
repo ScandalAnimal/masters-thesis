@@ -1,0 +1,29 @@
+@relation Phil_Foden
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+105,?,?,?,?,?,?,15,?,?,?,?,?,?,?,?,10
+106,?,?,?,?,?,?,18,?,?,?,?,?,?,?,?,16
+107,?,?,?,?,?,?,21,?,?,?,?,?,?,?,?,4
+108,?,?,?,?,?,?,24,?,?,?,?,?,?,?,?,3
+109,?,?,?,?,?,?,28,?,?,?,?,?,?,?,?,18
+110,?,?,?,?,?,?,32,?,?,?,?,?,?,?,?,14

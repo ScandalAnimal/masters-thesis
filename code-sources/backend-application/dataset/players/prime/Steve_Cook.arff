@@ -1,0 +1,31 @@
+@relation Steve_Cook
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,1,14,0.7,2,22,2.5,90,50,0,0,0,0,3,0,True,18
+137,-2,-8,0,0,0,0,30,50,0,0,0,1,1,0,False,14
+138,0,0,0,0,0,0,0,50,0,0,0,0,0,0,True,4
+139,0,0,0,0,0,0,0,50,0,0,0,0,0,0,True,2
+140,0,0,0,0,0,0,0,50,0,0,0,0,0,0,False,15
+141,0,13,0.3,0,19.6,2,90,50,0,0,1,0,3,0,False,5
+142,1,14,0.2,0,21.4,2.2,90,50,0,0,0,0,2,0,True,6
+143,1,4,0,2,4.2,0.6,18,50,0,0,0,0,0,0,False,10

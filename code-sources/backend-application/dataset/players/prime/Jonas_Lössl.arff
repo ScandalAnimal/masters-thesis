@@ -1,0 +1,31 @@
+@relation Jonas_Lössl
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,4
+99,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,19
+100,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,13
+101,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,18
+102,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,7
+103,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,1
+104,0,0,0,0,0,0,0,43,0,0,0,0,0,0,True,12
+105,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,6

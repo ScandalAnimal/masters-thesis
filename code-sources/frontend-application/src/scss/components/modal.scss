@@ -1,0 +1,32 @@
+@import '../atoms/variables';
+
+.modal-dialog {
+  .modal-content {
+    background-color: $color-egg;
+    border-radius: 10px;
+    border: 1px solid $color-ash;
+    box-shadow: $shadow-popup;
+
+    .modal-title {
+      font-size: 20px;
+    }
+  }
+}
+
+.player-data-displayed {
+  width: 75%;
+  max-width: 75%;
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loader-text {
+  margin-top: 20px;
+  color: $color-lynch;
+}

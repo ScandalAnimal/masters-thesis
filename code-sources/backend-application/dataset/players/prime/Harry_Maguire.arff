@@ -1,0 +1,31 @@
+@relation Harry_Maguire
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,6,31,2,0,20.6,2.3,90,52,0,0,0,0,0,0,True,14
+137,1,15,0.8,2,22.4,2.5,90,52,0,0,0,0,2,0,False,10
+138,1,17,2.1,2,16.6,2.1,90,52,0,0,0,0,2,0,True,5
+139,6,27,12.2,10,24.8,4.7,90,52,0,0,0,0,0,0,True,20
+140,15,44,0.2,21,63.4,8.5,90,52,1,0,0,0,0,0,False,6
+141,6,24,1.1,10,12.4,2.4,90,52,0,0,0,0,0,0,True,18
+142,1,13,1.3,0,32.8,3.4,90,52,0,0,1,0,1,0,False,8
+143,5,20,0.2,4,8.8,1.3,90,53,0,0,1,0,0,0,True,11

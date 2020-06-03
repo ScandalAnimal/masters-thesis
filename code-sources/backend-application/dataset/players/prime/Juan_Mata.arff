@@ -1,0 +1,31 @@
+@relation Juan_Mata
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,11,40,44.1,10,43,9.7,90,62,0,2,0,0,0,0,True,14
+137,1,2,6.5,21,4,3.2,16,62,0,0,0,0,1,0,False,10
+138,2,12,68.1,13,13,9.4,90,62,0,0,0,0,2,0,True,5
+139,3,9,11.6,9,4.4,2.5,87,62,0,0,0,0,0,0,True,20
+140,0,0,0,0,0,0,0,62,0,0,0,0,0,0,False,6
+141,0,0,0,0,0,0,0,62,0,0,0,0,0,0,True,18
+142,1,4,10.9,0,2.6,1.4,18,62,0,0,0,0,0,0,False,8
+143,0,0,0,0,0,0,0,62,0,0,0,0,0,0,True,11

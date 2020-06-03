@@ -1,0 +1,28 @@
+@import '../atoms/variables';
+
+.homepage {
+  //min-height: 100vh;
+}
+
+.login-input {
+  margin-bottom: 20px;
+}
+
+.login-disclaimer {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.login-error {
+  color: $color-light-red;
+  text-align: center;
+}
+
+.login-buttons {
+  display: flex;
+  flex-direction: row;
+
+  button {
+    margin-right: 10px;
+  }
+}

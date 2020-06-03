@@ -1,0 +1,31 @@
+@relation Marcos_Alonso
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+133,0,0,0,0,0,0,0,60,0,0,0,0,0,0,True,5
+134,0,0,0,0,0,0,0,60,0,0,0,0,0,0,False,13
+135,0,0,0,0,0,0,0,60,0,0,0,0,0,0,True,1
+136,0,0,0,0,0,0,0,60,0,0,0,0,0,0,False,9
+137,0,0,0,0,0,0,0,60,0,0,0,0,0,0,True,12
+138,8,21,25.2,13,47,8.5,90,60,1,0,0,0,1,0,True,17
+139,16,41,51.2,99,77.6,22.8,90,60,2,0,0,0,2,0,False,3
+140,6,21,4.7,3,3.6,1.1,90,61,0,0,0,0,0,0,True,8

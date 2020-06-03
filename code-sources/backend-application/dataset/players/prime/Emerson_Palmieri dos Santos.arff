@@ -1,0 +1,31 @@
+@relation 'Emerson_Palmieri dos Santos'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+73,0,0,0,0,0,0,0,55,0,0,0,0,0,0,True,5
+74,0,-2,1,10,0,0.9,15,55,0,0,1,0,1,0,False,13
+75,0,14,73.4,28,19.4,12.1,90,55,0,0,1,0,2,0,True,1
+76,0,0,0,0,0,0,0,55,0,0,0,0,0,0,False,9
+77,0,0,0,0,0,0,0,55,0,0,0,0,0,0,True,12
+78,0,0,0,0,0,0,0,54,0,0,0,0,0,0,True,17
+79,0,0,0,0,0,0,0,54,0,0,0,0,0,0,False,3
+80,0,0,0,0,0,0,0,54,0,0,0,0,0,0,True,8

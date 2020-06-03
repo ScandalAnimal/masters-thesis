@@ -1,0 +1,29 @@
+@relation Raheem_Sterling
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+143,?,?,?,?,?,?,58,?,?,?,?,?,?,?,?,10
+144,?,?,?,?,?,?,53,?,?,?,?,?,?,?,?,16
+145,?,?,?,?,?,?,47,?,?,?,?,?,?,?,?,4
+146,?,?,?,?,?,?,41,?,?,?,?,?,?,?,?,3
+147,?,?,?,?,?,?,48,?,?,?,?,?,?,?,?,18
+148,?,?,?,?,?,?,56,?,?,?,?,?,?,?,?,14

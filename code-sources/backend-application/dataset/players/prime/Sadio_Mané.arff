@@ -1,0 +1,31 @@
+@relation Sadio_Mané
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,3,0,25.5,41,3.2,7,82,124,0,0,0,0,0,0,True,12
+137,1,6,17,4,5.4,2.6,32,124,0,0,0,0,0,0,False,20
+138,0,0,0,0,0,0,0,124,0,0,0,0,0,0,False,19
+139,0,0,0,0,0,0,0,123,0,0,0,0,0,0,True,16
+140,5,21,2.6,21,33.2,5.7,30,122,1,0,1,0,0,0,False,14
+141,8,33,12.3,87,45.4,14.5,90,123,1,0,0,0,2,0,True,19
+142,2,5,4.2,8,4.6,1.7,90,124,0,0,0,0,3,0,False,18
+143,13,39,28.6,40,56.2,12.5,90,124,1,1,0,0,1,0,True,3

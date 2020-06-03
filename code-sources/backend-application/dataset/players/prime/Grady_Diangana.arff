@@ -1,0 +1,31 @@
+@relation Grady_Diangana
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+62,0,0,0,0,0,0,0,44,0,0,0,0,0,0,True,8
+63,0,0,0,0,0,0,0,44,0,0,0,0,0,0,False,9
+64,0,0,0,0,0,0,0,44,0,0,0,0,0,0,True,10
+65,0,0,0,0,0,0,0,44,0,0,0,0,0,0,True,4
+66,0,0,0,0,0,0,0,44,0,0,0,0,0,0,False,11
+67,0,0,0,0,0,0,0,44,0,0,0,0,0,0,False,10
+68,0,0,0,0,0,0,0,44,0,0,0,0,0,0,True,16
+69,0,0,0,0,0,0,0,43,0,0,0,0,0,0,False,1

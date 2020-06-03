@@ -1,0 +1,29 @@
+@relation Aymeric_Laporte
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+81,?,?,?,?,?,?,33,?,?,?,?,?,?,?,?,10
+82,?,?,?,?,?,?,38,?,?,?,?,?,?,?,?,16
+83,?,?,?,?,?,?,32,?,?,?,?,?,?,?,?,4
+84,?,?,?,?,?,?,37,?,?,?,?,?,?,?,?,3
+85,?,?,?,?,?,?,32,?,?,?,?,?,?,?,?,18
+86,?,?,?,?,?,?,28,?,?,?,?,?,?,?,?,14

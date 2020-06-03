@@ -1,0 +1,31 @@
+@relation Jordan_Ayew
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+113,9,27,12.9,25,37.6,7.6,90,50,1,0,0,0,1,0,True,1
+114,1,4,2.2,2,8.2,1.2,90,50,0,0,1,0,2,0,False,11
+115,2,11,13.2,22,10,4.5,90,50,0,0,0,0,2,0,True,16
+116,2,10,23,6,8.4,3.7,90,50,0,0,0,0,1,0,True,15
+117,2,8,4.3,4,7.4,1.6,90,50,0,0,0,0,3,0,False,8
+118,5,14,0.9,103,19.2,12.3,90,50,0,1,0,0,0,0,True,13
+119,7,28,12.1,19,37.4,6.9,90,50,1,0,0,0,0,0,False,4
+120,6,27,2.9,30,39.4,7.2,90,51,1,0,1,0,0,0,True,18

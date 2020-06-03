@@ -1,0 +1,31 @@
+@relation Chris_Wood
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+96,2,1,13.1,36,3.6,5.3,90,62,0,0,0,0,3,0,False,6
+97,7,28,2.2,55,30.4,8.8,90,62,1,0,0,0,1,0,True,9
+98,12,38,13.2,21,53.4,8.8,90,62,1,1,0,0,0,0,False,12
+99,2,8,43.5,20,11.4,7.5,90,62,0,0,0,0,0,0,True,1
+100,1,1,0.1,0,0,0,21,62,0,0,0,0,1,0,False,16
+101,0,0,0,0,0,0,0,62,0,0,0,0,0,0,True,3
+102,1,1,2.6,5,0,0.6,32,61,0,0,0,0,0,0,False,13
+103,9,28,23.7,99,43.4,16.6,90,61,1,0,0,0,1,0,True,17

@@ -1,0 +1,31 @@
+@relation Kelechi_Iheanacho
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,1,1,0.3,21,2,2.3,32,57,0,0,0,0,1,0,True,16
+137,1,9,26.1,10,5.4,4.2,16,57,0,0,0,0,1,0,False,5
+138,7,21,11.3,34,17.2,6.3,47,57,0,2,0,0,1,0,True,19
+139,1,1,0.4,0,2.6,0.3,10,57,0,0,0,0,0,0,True,6
+140,0,0,0,0,0,0,0,57,0,0,0,0,0,0,False,20
+141,1,1,1,19,4.2,2.4,45,57,0,0,0,0,0,0,True,11
+142,2,1,13.6,11,0,2.2,90,57,0,0,0,0,1,0,False,14
+143,1,-5,2.8,31,0.2,3.4,58,57,0,0,0,0,0,0,True,2

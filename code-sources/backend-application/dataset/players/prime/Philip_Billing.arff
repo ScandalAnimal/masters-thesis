@@ -1,0 +1,31 @@
+@relation Philip_Billing
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,1,1,2,6,12,2,31,50,0,0,0,0,2,0,True,18
+99,2,4,0.9,1,8.4,1,90,50,0,0,0,0,1,0,False,14
+100,2,8,22.1,39,26.6,8.8,90,50,0,0,0,0,1,0,True,4
+101,10,39,22.8,30,72.4,12.5,90,50,1,0,0,0,1,0,True,2
+102,2,8,3.2,4,16.2,2.3,90,50,0,0,0,0,2,0,False,15
+103,2,7,3.2,18,1.4,2.3,90,50,0,0,0,0,3,0,False,5
+104,2,12,13.3,23,20,5.6,90,50,0,0,0,0,2,0,True,6
+105,2,16,25.6,2,11,3.9,90,50,0,0,0,0,2,0,False,10

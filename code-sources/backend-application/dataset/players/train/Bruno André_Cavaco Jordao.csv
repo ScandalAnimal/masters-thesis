@@ -1,0 +1,12 @@
+gw_index,total_points,bps,creativity,threat,influence,ict_index,minutes,value,goals_scored,assists,yellow_cards,red_cards,goals_conceded,saves,was_home,opponent_team
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+
+1,0,0,0.0,0.0,0.0,0.0,0,45,0,0,0,0,0,0,False,16
+2,0,0,0.0,0.0,0.0,0.0,0,45,0,0,0,0,0,0,True,10
+3,0,0,0.0,0.0,0.0,0.0,0,45,0,0,0,0,0,0,False,12
+4,0,0,0.0,0.0,0.0,0.0,0,45,0,0,0,0,0,0,True,9
+5,0,0,0.0,0.0,0.0,0.0,0,45,0,0,0,0,0,0,True,14
+6,0,0,0.0,0.0,0.0,0.0,0,45,0,0,0,0,0,0,False,17
+7,0,0,0.0,0.0,0.0,0.0,0,45,0,0,0,0,0,0,True,4

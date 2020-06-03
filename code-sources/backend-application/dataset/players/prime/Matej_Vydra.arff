@@ -1,0 +1,31 @@
+@relation Matej_Vydra
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,1,2,3.3,0,0,0.3,17,53,0,0,0,0,0,0,False,6
+99,0,0,0,0,0,0,0,53,0,0,0,0,0,0,True,9
+100,0,0,0,0,0,0,0,53,0,0,0,0,0,0,False,12
+101,0,0,0,0,0,0,0,53,0,0,0,0,0,0,True,1
+102,9,34,0.5,45,42.4,8.8,68,53,1,0,0,0,0,0,False,16
+103,6,25,15,70,41.6,12.7,81,53,1,0,0,0,0,0,True,3
+104,1,5,14.3,2,2.2,1.9,57,53,0,0,0,0,0,0,False,13
+105,1,0,10.4,21,7,3.8,22,53,0,0,0,0,0,0,True,17

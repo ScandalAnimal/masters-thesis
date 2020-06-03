@@ -1,0 +1,31 @@
+@relation 'Ricardo Domingos_Barbosa Pereira'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+60,1,22,1.8,0,21.4,2.3,90,64,0,0,0,0,2,0,True,16
+61,1,19,28.3,12,27.6,6.8,90,64,0,0,0,0,2,0,False,5
+62,12,39,35.1,41,69.8,14.6,90,63,1,1,0,0,1,0,True,19
+63,1,5,2.5,10,10.6,2.3,90,63,0,0,0,0,2,0,True,6
+64,6,23,19.7,6,16.2,4.2,90,63,0,0,0,0,0,0,False,20
+65,2,13,25.8,13,27,6.6,90,63,0,0,0,0,1,0,True,11
+66,2,9,18.7,6,17,4.2,90,63,0,0,0,0,1,0,False,14
+67,6,26,32.3,0,14,4.6,90,63,0,0,0,0,0,0,True,2

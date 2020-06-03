@@ -1,0 +1,31 @@
+@relation Yves_Bissouma
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+60,0,0,0,0,0,0,0,50,0,0,0,0,0,0,False,8
+61,0,0,0,0,0,0,0,50,0,0,0,0,0,0,True,2
+62,0,0,0,0,0,0,0,50,0,0,0,0,0,0,False,3
+63,0,0,0,0,0,0,0,50,0,0,0,0,0,0,False,19
+64,0,0,0,0,0,0,0,50,0,0,0,0,0,0,True,18
+65,1,7,2.2,8,14,2.4,90,50,0,0,1,0,1,0,False,15
+66,2,11,3.1,1,14.4,1.9,81,50,0,0,0,0,1,0,True,7
+67,3,18,7.5,5,20.2,3.3,90,50,0,0,0,0,0,0,False,20

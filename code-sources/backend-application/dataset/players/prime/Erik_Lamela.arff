@@ -1,0 +1,31 @@
+@relation Erik_Lamela
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,1,4,0.5,9,6.6,1.6,21,57,0,0,0,0,0,0,True,10
+137,3,9,13.5,94,0,10.6,90,57,0,0,0,0,0,0,False,18
+138,3,4,2.9,25,7.2,3.5,61,57,0,0,0,0,0,0,True,14
+139,1,2,1.7,0,1,0.3,20,57,0,0,0,0,0,0,True,11
+140,0,0,0,0,0,0,0,57,0,0,0,0,0,0,False,2
+141,4,15,3.5,10,4.8,1.8,27,57,0,1,0,0,0,0,False,6
+142,0,0,0,0,0,0,0,57,0,0,0,0,0,0,True,20
+143,4,9,22.8,13,6.4,4.2,77,57,0,1,1,0,1,0,False,5

@@ -1,0 +1,31 @@
+@relation Michael_Keane
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,6,24,0.8,13,23.6,3.7,90,53,0,0,0,0,0,0,True,4
+137,0,0,0,0,0,0,0,53,0,0,0,0,0,0,False,19
+138,0,0,0,0,0,0,0,53,0,0,0,0,0,0,True,13
+139,1,4,0,0,4.2,0.4,17,52,0,0,0,0,0,0,False,18
+140,2,12,0.2,0,25.6,2.6,90,52,0,0,0,0,1,0,True,7
+141,0,0,0,0,0,0,0,52,0,0,0,0,0,0,False,1
+142,2,16,13.4,2,12.2,2.8,90,52,0,0,0,0,1,0,True,12
+143,0,14,0.4,0,19.6,2,90,52,0,0,0,0,4,0,False,6

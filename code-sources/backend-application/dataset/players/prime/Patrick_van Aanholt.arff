@@ -1,0 +1,31 @@
+@relation 'Patrick_van Aanholt'
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,0,0,0,0,0,0,0,55,0,0,0,0,0,0,True,1
+137,0,0,0,0,0,0,0,55,0,0,0,0,0,0,False,11
+138,0,0,0,0,0,0,0,55,0,0,0,0,0,0,True,16
+139,2,13,11.2,16,8.2,3.5,90,55,0,0,0,0,1,0,True,15
+140,1,11,6.1,19,7.4,3.3,90,55,0,0,0,0,3,0,False,8
+141,15,53,83,12,49,14.4,90,55,1,0,0,0,0,0,True,13
+142,8,32,29.6,4,32.8,6.6,90,55,0,0,0,0,0,0,False,4
+143,6,22,16.1,14,17.6,4.8,90,55,0,0,0,0,0,0,True,18

@@ -1,0 +1,31 @@
+@relation Aaron_Cresswell
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,2,16,59.3,0,21.4,8.1,90,47,0,0,0,0,1,0,True,8
+137,0,9,19.5,4,13.2,3.7,90,47,0,0,0,0,4,0,False,9
+138,1,11,4.3,0,12.6,1.7,90,47,0,0,0,0,2,0,True,10
+139,1,15,16.8,0,13.8,3.1,90,47,0,0,0,0,3,0,True,4
+140,1,13,11.4,0,20.4,3.2,90,47,0,0,0,0,2,0,False,11
+141,1,10,1.5,4,14.4,2,90,46,0,0,0,0,3,0,False,10
+142,1,7,18.9,0,5.6,2.5,90,46,0,0,1,0,1,0,True,16
+143,2,10,18.5,1,21.6,4.1,90,46,0,0,0,0,1,0,False,1

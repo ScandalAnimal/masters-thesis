@@ -1,0 +1,31 @@
+@relation Victor_Lindelöf
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,6,23,1.2,0,12.6,1.4,90,53,0,0,0,0,0,0,True,14
+99,1,12,0.7,0,20.4,2.1,90,53,0,0,0,0,2,0,False,10
+100,0,0,0,0,0,0,0,53,0,0,0,0,0,0,True,5
+101,5,24,11.2,24,20.2,5.5,90,53,0,0,1,0,0,0,True,20
+102,0,0,0,0,0,0,0,53,0,0,0,0,0,0,False,6
+103,6,24,1.3,0,13.4,1.5,90,53,0,0,0,0,0,0,True,18
+104,1,13,0.4,0,8,0.8,90,53,0,0,1,0,1,0,False,8
+105,9,31,0.8,0,18,1.9,90,53,0,0,0,0,0,0,True,11

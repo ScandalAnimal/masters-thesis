@@ -1,0 +1,29 @@
+@relation Paul_Dummett
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+106,?,?,?,?,?,?,0,?,?,?,?,?,?,?,?,3
+107,?,?,?,?,?,?,0,?,?,?,?,?,?,?,?,19
+108,?,?,?,?,?,?,0,?,?,?,?,?,?,?,?,18
+109,?,?,?,?,?,?,0,?,?,?,?,?,?,?,?,17
+110,?,?,?,?,?,?,0,?,?,?,?,?,?,?,?,4
+111,?,?,?,?,?,?,0,?,?,?,?,?,?,?,?,10

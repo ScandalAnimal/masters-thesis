@@ -1,0 +1,31 @@
+@relation Jack_Simpson
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+86,0,0,0,0,0,0,0,39,0,0,0,0,0,0,True,18
+87,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,14
+88,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,4
+89,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,2
+90,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,15
+91,0,0,0,0,0,0,0,40,0,0,0,0,0,0,False,5
+92,0,0,0,0,0,0,0,40,0,0,0,0,0,0,True,6
+93,1,8,0.1,0,5.4,0.6,71,40,0,0,0,0,2,0,False,10

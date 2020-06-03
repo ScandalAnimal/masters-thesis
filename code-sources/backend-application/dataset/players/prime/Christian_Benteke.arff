@@ -1,0 +1,31 @@
+@relation Christian_Benteke
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,0,0,0,0,0,0,0,57,0,0,0,0,0,0,True,1
+137,0,0,0,0,0,0,0,57,0,0,0,0,0,0,False,11
+138,0,0,0,0,0,0,0,57,0,0,0,0,0,0,True,16
+139,2,7,22.5,25,6,5.4,76,57,0,0,0,0,1,0,True,15
+140,7,25,21.8,70,44.2,13.6,90,57,1,0,0,0,3,0,False,8
+141,2,2,2.1,38,10.6,5.1,88,57,0,0,0,0,0,0,True,13
+142,4,12,24.3,50,22.4,9.7,86,57,0,1,1,0,0,0,False,4
+143,1,7,46.8,16,19,8.2,90,57,0,0,1,0,0,0,True,18

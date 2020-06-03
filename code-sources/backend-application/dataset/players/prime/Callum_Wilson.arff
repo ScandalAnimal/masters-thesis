@@ -1,0 +1,31 @@
+@relation Callum_Wilson
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,2,4,8.6,14,0,2.1,90,74,0,0,0,0,3,0,True,18
+137,1,-2,3.4,41,4.4,4.9,90,74,0,0,1,0,1,0,False,14
+138,8,31,24.3,31,39.8,9.5,90,74,1,0,0,0,1,0,True,4
+139,1,1,11.5,44,0,5.3,90,74,0,0,1,0,1,0,True,2
+140,8,28,27.7,23,38,8.9,90,74,1,0,0,0,2,0,False,15
+141,2,-3,1.6,45,1.2,4.8,90,74,0,0,0,0,3,0,False,5
+142,1,1,2.4,42,11.2,5.6,90,74,0,0,1,0,2,0,True,6
+143,5,26,4.7,35,39,7.9,90,74,1,0,1,0,2,0,False,10

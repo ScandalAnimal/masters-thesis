@@ -1,0 +1,31 @@
+@relation Lewis_Dunk
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+98,2,8,0.9,40,25.4,6.6,90,48,0,0,0,0,1,0,False,8
+99,1,12,10.7,22,13,4.6,90,48,0,0,1,0,1,0,True,2
+100,1,16,2.3,42,28.6,7.3,90,48,0,0,0,0,3,0,False,3
+101,1,16,0.4,1,10.4,1.2,90,48,0,0,0,0,3,0,False,19
+102,2,16,13,6,16,3.5,90,48,0,0,0,0,1,0,True,18
+103,2,11,10.5,6,28,4.5,90,48,0,0,0,0,1,0,False,15
+104,2,18,10.9,81,17,10.9,90,48,0,0,0,0,1,0,True,7
+105,5,23,0.8,0,18,1.9,90,48,0,0,1,0,0,0,False,20

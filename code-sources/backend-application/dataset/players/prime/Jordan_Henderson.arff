@@ -1,0 +1,31 @@
+@relation Jordan_Henderson
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+136,3,19,15.8,19,20.8,5.6,90,54,0,0,0,0,0,0,True,12
+137,13,44,25.2,19,60.4,10.5,90,54,1,1,0,0,1,0,False,20
+138,3,18,27.1,12,25.4,6.5,90,54,0,0,0,0,0,0,False,19
+139,13,43,21.7,27,57,10.6,87,54,1,1,0,0,0,0,True,16
+140,7,25,14.7,4,27.8,4.7,90,55,0,1,0,0,0,0,False,14
+141,0,0,0,0,0,0,0,55,0,0,0,0,0,0,True,19
+142,0,0,0,0,0,0,0,54,0,0,0,0,0,0,False,18
+143,0,0,0,0,0,0,0,54,0,0,0,0,0,0,True,3

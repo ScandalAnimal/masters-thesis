@@ -1,0 +1,29 @@
+@relation Danny_Rose
+
+@attribute gw_index numeric
+@attribute total_points numeric
+@attribute bps numeric
+@attribute creativity numeric
+@attribute threat numeric
+@attribute influence numeric
+@attribute ict_index numeric
+@attribute minutes numeric
+@attribute value numeric
+@attribute goals_scored numeric
+@attribute assists numeric
+@attribute yellow_cards numeric
+@attribute red_cards numeric
+@attribute goals_conceded numeric
+@attribute saves numeric
+@attribute was_home {False,True}
+@attribute opponent_team numeric
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
+144,?,?,?,?,?,?,58,?,?,?,?,?,?,?,?,3
+145,?,?,?,?,?,?,68,?,?,?,?,?,?,?,?,19
+146,?,?,?,?,?,?,77,?,?,?,?,?,?,?,?,18
+147,?,?,?,?,?,?,75,?,?,?,?,?,?,?,?,17
+148,?,?,?,?,?,?,76,?,?,?,?,?,?,?,?,4
+149,?,?,?,?,?,?,74,?,?,?,?,?,?,?,?,10
