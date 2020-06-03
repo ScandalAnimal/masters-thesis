@@ -1,6 +1,6 @@
 # Intelligent Manager of Fantasy Premier League Game - User Manual
 
-Project URL: https://github.com/ScandalAnimal/masters-thesis
+
 
 ## About
 This application can be used to help and support user while playing the [Fantasy Premier League](https://fantasy.premierleague.com/) official application.
