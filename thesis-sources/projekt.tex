@@ -78,31 +78,31 @@
 \ifWis
 \ifx\pdfoutput\undefined % nejedeme pod pdflatexem / we are not using pdflatex
 \else
-\usepackage{color}
-\usepackage[unicode,colorlinks,hyperindex,plainpages=false,pdftex]{hyperref}
-\definecolor{hrcolor-ref}{RGB}{223,52,30}
-\definecolor{hrcolor-cite}{HTML}{2F8F00}
-\definecolor{hrcolor-urls}{HTML}{092EAB}
-\hypersetup{
-  linkcolor=hrcolor-ref,
-  citecolor=hrcolor-cite,
-  filecolor=magenta,
-  urlcolor=hrcolor-urls
-}
-\def\pdfBorderAttrs{/Border [0 0 0] }  % bez okrajů kolem odkazů / without margins around links
-\pdfcompresslevel=9
+  \usepackage{color}
+  \usepackage[unicode,colorlinks,hyperindex,plainpages=false,pdftex]{hyperref}
+  \definecolor{hrcolor-ref}{RGB}{223,52,30}
+  \definecolor{hrcolor-cite}{HTML}{2F8F00}
+  \definecolor{hrcolor-urls}{HTML}{092EAB}
+  \hypersetup{
+	linkcolor=hrcolor-ref,
+	citecolor=hrcolor-cite,
+	filecolor=magenta,
+	urlcolor=hrcolor-urls
+  }
+  \def\pdfBorderAttrs{/Border [0 0 0] }  % bez okrajů kolem odkazů / without margins around links
+  \pdfcompresslevel=9
 \fi
 \else % pro tisk budou odkazy, na které se dá klikat, černé / for the print clickable links will be black
 \ifx\pdfoutput\undefined % nejedeme pod pdflatexem / we are not using pdflatex
 \else
-\usepackage{color}
-\usepackage[unicode,colorlinks,hyperindex,plainpages=false,pdftex,urlcolor=black,linkcolor=black,citecolor=black]{hyperref}
-\definecolor{links}{rgb}{0,0,0}
-\definecolor{anchors}{rgb}{0,0,0}
-\def\AnchorColor{anchors}
-\def\LinkColor{links}
-\def\pdfBorderAttrs{/Border [0 0 0] } % bez okrajů kolem odkazů / without margins around links
-\pdfcompresslevel=9
+  \usepackage{color}
+  \usepackage[unicode,colorlinks,hyperindex,plainpages=false,pdftex,urlcolor=black,linkcolor=black,citecolor=black]{hyperref}
+  \definecolor{links}{rgb}{0,0,0}
+  \definecolor{anchors}{rgb}{0,0,0}
+  \def\AnchorColor{anchors}
+  \def\LinkColor{links}
+  \def\pdfBorderAttrs{/Border [0 0 0] } % bez okrajů kolem odkazů / without margins around links
+  \pdfcompresslevel=9
 \fi
 \fi
 % Řešení problému, kdy klikací odkazy na obrázky vedou za obrázek
@@ -112,7 +112,7 @@
 % Informace o práci/projektu / Information about the thesis
 %---------------------------------------------------------------------------
 \projectinfo{
-%Prace / Thesis
+  %Prace / Thesis
   project={DP},            %typ práce BP/SP/DP/DR  / thesis type (SP = term project)
   year={2020},             % rok odevzdání / year of submission
   date=\today,             % datum odevzdání / submission date
@@ -133,40 +133,41 @@
   supervisor.title.p={Ing.},   %titul před jménem (nepovinné) / title before the name (optional)
   supervisor.title.a={Ph.D.},    %titul za jménem (nepovinné) / title after the name (optional)
   % Klíčová slova / keywords
-  keywords.cs={Fantasy Premier League, Premier League, fantasy športy, futbal, predikcie, neurónové siete, rekurentné neurónové siete, lineárne programovanie, strojové učenie, učenie s učiteľom, predikcie časových radov, webová aplikácia}, % klíčová slova v českém či slovenském jazyce / keywords in czech or slovak language
-  keywords.en={Fantasy Premier League, Premier League, fantasy sports, football, prediction, neural networks, recurrent neural network, linear programming, machine learning, supervised learning, time series forecasting, web application}, % klíčová slova v anglickém jazyce / keywords in english
+  keywords.cs={Fantasy Premier League, Premier League, fantasy športy, futbal, predikcie, neurónové siete, strojové učenie, učenie s učiteľom, predikcie časových radov, webová aplikácia}, % klíčová slova v českém či slovenském jazyce / keywords in czech or slovak language
+  keywords.en={Fantasy Premier League, Premier League, fantasy sports, football, prediction, neural networks, machine learning, supervised learning, time series forecasting, web application}, % klíčová slova v anglickém jazyce / keywords in english
   %keywords.en={Here, individual keywords separated by commas will be written in English.},
   % Abstrakt / Abstract
-  abstract.cs={Hra Fantasy Premier League poskytuje miliónom hráčov po celom svete možnosť stať sa na chvíľu manažérom svojho vlastného klubu. Výsledky a bodové ohodnotenie v hre závisia na správnom predvídaní, ako sa budú hráči chovať v skutočných futbalových zápasoch. Ak by pri tomto rozhodovaní pomáhal software na predikciu a analýzu budúcich výkonov hráčov, výsledky v hre sa môžu rapídne zlepšiť. Táto diplomová práca sa zaoberá návrhom a implementáciou predikčného modelu, ktorý využíva rekurentné neurónové siete na predikcie časových radov počas celej sezóny v hre. Boli použité metódy na spracovanie dát o hráčoch a kluboch za posledné 4 sezóny. Výkonnosť a presnosť predikčných metód boli testované na dátach z poslednej sezóny Premier League a predikcie algoritmu sa vo väčšine prípadov blížili realite. Ak by sa užívateľ držal predikčného modelu v hre stopercentne, získal by väčší počet bodov ako bežný hráč, ktorý žiadny predikčný model nepoužíva.}, % abstrakt v českém či slovenském jazyce / abstract in czech or slovak language
-  abstract.en={Fantasy Premier League online game gives millions of players around the world the chance to become a manager of their club for a while. The results and scores in the game depend on correctly predicting how players will behave in real football matches. If the user had software for predicting and analyzing players' future performance, it would help with making decisions and the outcome of the game could significantly improve. This master's thesis deals with the design and implementation of a prediction model that uses recurrent neural networks for time series prediction throughout the game season. Various methods were used to process player and club data for the last 4 seasons. The results are presented in the form of a web application where users can use the created model on their teams. Performance and accuracy of prediction methods were tested on data from the last season of the Premier League and algorithm predictions were in most cases close to reality. If the user used the prediction model’s advice 100\% in the game, he would score more points than a regular player who does not use any prediction model.}, % abstrakt v anglickém jazyce / abstract in english
+  abstract.cs={Hra Fantasy Premier League poskytuje miliónom hráčov po celom svete možnosť stať sa na~chvíľu manažérom svojho vlastného klubu. Výsledky a bodové ohodnotenie v hre závisia na správnom predvídaní, ako sa budú hráči chovať v skutočných futbalových zápasoch. Ak by pri tomto rozhodovaní pomáhal software na predikciu a analýzu budúcich výkonov hráčov, výsledky v hre sa môžu rapídne zlepšiť. Táto diplomová práca sa zaoberá návrhom a~implementáciou predikčného modelu, ktorý využíva neurónové siete na predikcie časových radov počas celej sezóny v hre. Boli použité metódy na spracovanie dát o~hráčoch a kluboch za posledné 4 sezóny. Výkonnosť a presnosť predikčných metód boli testované na dátach z poslednej sezóny Premier League a predikcie algoritmu sa vo väčšine prípadov blížili realite. Ak by sa užívateľ držal predikčného modelu v hre stopercentne, získal by väčší počet bodov ako bežný hráč, ktorý žiadny predikčný model nepoužíva.}, % abstrakt v českém či slovenském jazyce / abstract in czech or slovak language
+  abstract.en={Fantasy Premier League online game gives millions of players around the world the chance to become a manager of their club for a while. The results and scores in the game depend on correctly predicting how players will behave in real football matches. If the user had software for predicting and analyzing players' future performance, it would help with making decisions and the outcome of the game could significantly improve. This master's thesis deals with the design and implementation of a prediction model that uses neural networks for time series prediction throughout the game season. Various methods were used to process player and club data for the last 4 seasons. The results are presented in the form of a web application where users can use the created model on their teams. Performance and accuracy of prediction methods were tested on the data from the last season of the Premier League and algorithm predictions were in most of the cases close to reality. If the user used the prediction model’s advice 100\% in the game, he would score more points than a regular player who does not use any prediction model.}, % abstrakt v anglickém jazyce / abstract in english
   %abstract.en={An abstract of the work in English will be written in this paragraph.},
 %   Prohlášení (u anglicky psané práce anglicky, u slovensky psané práce slovensky) / Declaration (for thesis in english should be in english)
 %   declaration={Prohlašuji, že jsem tuto bakalářskou práci vypracoval samostatně pod vedením pana X...
 % Další informace mi poskytli...
 % Uvedl jsem všechny literární prameny a publikace, ze kterých jsem čerpal.},
   declaration={Hereby I declare that this term project was prepared as an original author’s work under the supervision of Ing. Jiří Hynek, Ph.D.
-  All the relevant information sources, which were used during preparation of this thesis, are properly cited and included in the list of references.},
+All the relevant information sources, which were used during preparation of this thesis, are properly cited and included in the list of references.},
   % Poděkování (nepovinné, nejlépe v jazyce práce) / Acknowledgement (optional, ideally in the language of the thesis)
-  acknowledgment={I would like to thank mu supervisor, Ing. Jiří Hynek, Ph.D. for his advice, suggestions, guidance and the time he dedicated to me.},
+   acknowledgment={I would like to thank mu supervisor, Ing. Jiří Hynek, Ph.D. for his advice, suggestions, guidance and the time he dedicated to me.},
   %acknowledgment={Here it is possible to express thanks to the supervisor and to the people which provided professional help
 %(external submitter, consultant, etc.).},
   % Rozšířený abstrakt (cca 3 normostrany) - lze definovat zde nebo níže / Extended abstract (approximately 3 standard pages) - can be defined here or below
   extendedabstract={
-    Medzi športovými nadšencami sa v posledných rokoch tešia veľkej obľube fantasy hry. Ide už o starší koncept, ktorý ale každým rokom naberá na popularite. Fantasy hry sú online hry, ktoré sa snažia pridať novú zábavu pre tradičných športových fanúšikov. Existuje veľké množstvo fantasy hier, ktoré sa líšia šport od športu, ale existujú aj rôzne varianty v rámci jednotlivých športových odvetví. U fantasy hier, ktoré sa zaoberajú kolektívnymi športami, ako sú futbal či hokej, hra prebieha väčšinou podobne. Každý hráč si pred herným kolom volí zostavu, ktorá je zložená zo skutočných hráčov daného športu. Pre výber zostavy exsitujú rôzne pravidlá, ktoré sa líšia v každej hre. Takto zvolené tímy sú po každom odohranom kole bodovo ohodnotené podľa toho, aké výkony športovci podávali v realite. Aj bodové ohodnotenia sa líšia pre každú fantasy hru.
+  Medzi športovými nadšencami sa fantasy hry v posledných rokoch tešia veľkej obľube. Ide už o starší koncept, ktorý ale každým rokom naberá na popularite. Fantasy hry sú online hry, ktoré sa snažia pridať nový typ zábavy pre tradičných športových fanúšikov. Existuje veľké množstvo fantasy hier, ktoré sa líšia šport od športu, ale existujú aj rôzne varianty v rámci jednotlivých športových odvetví. U fantasy hier, ktoré sa zaoberajú kolektívnymi športami, ako sú futbal či hokej, hra prebieha väčšinou podobne. Každý hráč si pred herným kolom volí zostavu, ktorá je zložená zo skutočných hráčov daného športu. Pre výber zostavy existujú rôzne pravidlá, ktoré sa líšia v každej fantasy hre. Takto zvolené zostavy sú po~každom odohranom kole bodovo ohodnotené podľa toho, aké výkony športovci podávali v realite. Aj bodové ohodnotenia sa líšia pre každú fantasy hru.
+  
+  Táto diplomová práca sa sústreďuje na konkrétnu fantasy hru a to na Fantasy Premier League, čo je oficiálna fantasy hra anglickej futbalovej asociácie. V práci je vytvorený pomocný nástroj pre hráča tejto hry, ktorý mu má pomôcť získať potenciálne vyššie skóre a posunúť sa v rebríčku vyššie. Nápad pre takýto nástroj nie je novinkou, rôzne viac či menej efektívne riešenia sú dostupné na internete. Cieľom tejto práce je nevymýšľať koncept od~začiatku, ale preskúmať existujúce riešenia, vybrať najpoužívanejšie súčasti a~tie efektívne implementovať s použitím kvalitnejších odporúčacích algoritmov. Zámerom je sústrediť sa na podstatu samotnej predikcie získaných bodov a určiť kde majú existujúce riešenia medzery a vylepšiť ich. Dôležitým výstupom práce je aj zhodnotenie, ktoré atribúty a štatistiky hráčov majú na ich výkon najväčší vplyv.
+  
+  V texte práce popisujem proces, ktorý bol použitý pre vytvorenie finálnej aplikácie. Na~začiatku popisujem pravidlá vybranej fantasy hry. S týmito pravidlami sa bolo potrebné oboznámiť hneď na začiatku pre pochopenie samotnej podstaty hry. Venujem sa podrobnému rozboru pravidiel hry, ako sú hráči ohodnocovaní a čo všetko je možné v rámci tejto hry využívať. Fantasy Premier League bola zvolená z dôvodu, že je najpoužívanejšou futbalovou fantasy hrou na svete. Je na trhu už dlhé roky a jej pravidlá sa postupne vyvíjajú a vylepšujú.
+  
+  V ďalšej kapitole sa sústreďujem na existujúce riešenia, ktoré majú napomáhať ma\-nažérom vylepšovať svoje tímy a zlepšovať sa v hre. Analýza týchto riešení je dôležitá z~pohľadu samotných užívateľov navrhovanej aplikácie. Popisujem najpopulárnejšie riešenia, čo prinášajú užitočné a unikátne, a v čom sa odlišujú od iných. Z tejto analýzy vyplynuli najužitočnejšie a najpoužívanejšie súčasti týchto nástrojov, ktoré budú replikované a vylepšené v novej aplikácii. Takisto boli určené najväčšie problémy existujúcich riešení, ktoré by sa do novej aplikácie nemali dostať.
+  
+  Následne sa venujem analýze princípov strojového učenia a rôznych algoritmov pre predikciu. Správne pochopenie problematiky je nevyhnutné k tomu, aby sa mohol určiť správny model pre vytváranie predpovedí. Rozoberám princípy strojového učenia od naj\-jednoduchších regresií až po neurónové siete. Tie sú použité vo výslednom implementovanom modeli. Bez tejto analýzy by nebolo možné efektívne a korektne implementovať základnú funkčnú časť aplikácie. Venujem sa aj analýze knižníc pre strojové učenie.
+  
+  V nasledujúcej kapitole podrobne definujem požiadavky na výslednú aplikáciu, ktoré vyplynuli z vykonaných analýz. Sú určené požiadavky, ktoré majú napomôcť tomu, aby aplikácia dosahovala požadované funkcie. V tejto kapitole je predostretý aj návrh nového riešenia. Ukazujem tam ako návrh serveru, tak aj webovej aplikácie, ktorá sa bude zobrazovať užívateľovi. V tejto kapitole rozoberám aj navrhovaný postup získavania dát o hráčoch z API Fantasy Premier League. Táto analýza je nevyhnutná pre efektívne získavanie najnovších dát o hráčoch. Tieto dáta sú použité pre trénovanie modelu a pre zobrazenie vo~webovej aplikácii. Súčasťou textu práce je aj popis implementácie aplikácie, ktorá sa tesne drží navrhovaného postupu. Popisujem tam spôsob, akým je implementovaná serverová časť, aby dokázala prijať a spracovať všetky používateľské požiadavky. Ďalej popisujem spôsob získavania dát pre trénovanie modelu, ako aj trénovanie a výber vhodných atribútov. Okrem toho popisujem grafické používateľské rozhranie a ukazujem na snímkach z vyvinutej aplikácie, ako aplikácie vyzerá pre koncového používateľa. Táto časť práce detailne popisuje čo všetko bolo potrebné dodať pre splnenie požiadaviek. 
+  
+  Jednou z najdôležitejších častí práce je zhodnotenie úspešnosti a presnosti nástroja. Boli navrhnuté viaceré testy, ktoré majú otestovať rôzne aspekty aplikácie. Prvým testom je porovnanie presnosti nástroja pre viaceré skupiny hráčov, napríklad podľa historických štatistík, pozície na ihrisku či podľa doby, ako dlho už hrajú v anglickej futbalovej lige. Tento test má za úlohu ukázať, či sa algoritmus nechová netradične pre niektoré skupiny hráčov, a teda či predpovedá výsledky pre všetkých hráčov uniformne. Ďalším testom je experiment, či by sa používateľ, ktorý by pravidelne používal vytvorený nástroj umiestňoval vyššie v hernom rebríčku, len vďaka radám od tohto nástroja. Tento test prebehol úspešne pre hráča, ktorý je umiestnený v strede rebríčka. Pre hráča z najvyšších pozícii, ktorý má pravdepodobne vlastný algoritmus na pomoc v hre, už môj algoritmus nedokázal pravidelne výsledky zlepšovať. Po vykonaných experimentoch som definoval v čom je vytvorená aplikácia úspešná a určil jej presnosť a použiteľnosť. V aktuálnom stave je aplikácia použiteľná a vykazuje mierne lepšie výsledky ako keby sa nepoužívala vôbec.
+  
+  Na záver popisujem ďalšie možnosti, ako by aplikácia šla vylepšovať a ako ďalej zvyšovať efektivitu algoritmu. V prípade, že sa bude ďalej vyvíjať, má potenciál výrazným spôsobom zlepšiť výsledky používateľa v hre, a tým aj zlepšiť jeho celkový zážitok z hry.
 
-    Táto diplomová práca sa sústreďuje na konkrétnu hru a to na Fantasy Premier League, čo je oficiálna fantasy hra anglickej futbalovej asociácie. V práci je vytvorený pomocný nástroj pre hráča tejto hry, ktorý mu má pomôcť získať potenciálne vyššie skóre v hre a posunúť sa v rebríčku vyššie. Nápad pre takýto nástroj nie je novinkou, rôzne viac či menej efektívne riešenia sú dostupné na internete. Cieľom tejto práce je nevymýšľať koncept od začiatku, ale preskúmať existujúce riešenia, vybrať najpoužívanejšie súčasti a tie efektívne implementovať s použitím kvalitnejších doporučovacích algoritmov. Zámerom je sústrediť sa na podstatu samotnej predikcie získaných bodov a určiť kde majú existujúce riešenia medzery a vylepšiť ich.
-
-    V texte práce popíšem proces, ktorý bol použitý pre vytvorenie finálnej aplikácie. Na začiatku popisujem pravidlá samotnej fantasy hry. S týmito pravidlami sa bolo potrebné oboznámiť hneď na začiatku pre pochopenie samotnej podstaty hry. Venujem sa podrobnému rozboru pravidiel hry, ako sú hráči ohodnocovaní a čo všetko je možné v rámci tejto hry využívať. Fantasy Premier League bola zvolená z dôvodu, že je najpoužívanejšou fantasy hrou na svete. Je na trhu už dlhé roky a jej pravidlá sa postupne vyvíjajú a vylepšujú.
-
-    V ďalšej kapitole sa sústreďujem na existujúce riešenia, ktoré majú napomáhať manažérom vylepšovať svoje tímy a zlepšovať sa v hre. Analýza týchto riešené je dôležitá z pohľadu samotných užívateľov navrhovanej aplikácie. Popisujem najpopulárnejšie riešenia, čo prinášajú užitočné a unikátne, a v čom sa odliľujú od iných. Z tejto analýzy vyplynuli najužitočnejšie a najpoužívanejšie súčasti týchto nástrojov, ktoré budú replikované v novej aplikácii. Takisto boli určené najväčšie problémy existujúcich riešení, ktoré by sa do novej aplikácie nemali dostať.
-
-    Následne sa venujem analýze princípe strojového učenia a rôznych algoritmov pre predikciu. Správne pochopenie problematiky je nevyhnutné k tomu, aby sa mohol určiť správny model pre vytváranie predpovedí. Rozoberám princípy strojového učenia od najjednoduchších regresií až po neurónové siete. Tie sú aj použité vo výslednom implementovanom modeli. Bez tejto analýzy by nebolo efektívne a korektne implementovať ani základnú funkčnú časť aplikácie. Venujem sa aj analýze knižníc pre strojové učenie.
-
-    V nasledujúcej kapitole podrobne definujem požiadavky na výslednú aplikáciu, ktoré vyplynuli z vykonaných analýz. Sú určené požiadavky, ktoré majú napomôcť tomu, aby aplikácia dosahovala požadované funkcie. V tejto kapitole je predostrený aj návrh nového riešenia. Ukazujem tam ako návrh serveru, tak aj webovej aplikácie, ktorá sa bude zobrazovať užívateľovi. V tejto kapitole rozoberám aj navrhovaný postup získavania dát o hráčoch z API Fantasy Premier League. Táto analýza je nevyhnutná pre efektívne získavanie najnovších dát o hráčoch. Tieto dáta sú použité pre trénovanie modelu a pre zobrazenie vo webovej aplikácii. Súčasťou textu práce je aj popis implementácie aplikácie, ktorá sa tesne drží navrhovaného postupu. Popisujem tam spôsob, akým je implementovaná serverová časť, aby dokázala prijať a spracovať všetky zžívateľské požiadavky. Ďalej popisujem spôsob získavania dát pre trénovanie modelu, ako aj samotné trénovanie a výber vhodných atribútov. Okrem toho popisujem grafické použivateľské rozhranie a ukazujem na snímkach z vyvinutej aplikácie, ako aplikácie vyzerá pre koncového používateľa. Táto časť práce detailne popisuje čo všetko bolo potrebné dodať pre splnenie požiadaviek.
-
-    Jednou z najdôležitejších častí práce je zhodnotenie úspešnosti a presnosti nástroja. Boli navrhuté viaceré testy, ktoré majú ukázať rôzne aspekty aplikácie. Prvým testom je porovnanie presnosti nástroja pre viaceré skupiny hráčov, napríklad podľa historických štatistík, pozície na ihrisku či podľa doby, ako dlho už hrajú v anglickej futbalovej lige. Tento test má za úlohu ukázať, či sa algoritmus nechová netradične pre niektoré skupiny hráčov, a teda či predpovedá výsledky pre všetkých hráčov uniformne. Ďalším testom je experiment, či by sa používateľ, ktorý by pravidelne používal vytvorený nástroj umiestňoval vyššie v hernom rebríčku, len vďaka radám od tohto nástroja. Tento test prebehol úspešne pre hráča, ktorý je umiestnený v strede rebríčka, a nepodáva najlepšie výkony. Pre hráča z najvyšších pozícii algoritmus nedokázal pravidelne výsledky zlepšovať. Po vykonaných experimentoch som definoval v čom je vytvorená aplikácia úspešná a určil jej presnosť a použiteľnosť. V aktuálnom stave je aplikácia použiteľná a vykazuje mierne lepšie výsledky než keby sa nepoužívala vôbec.
-
-    Na záver popisujem ďalšie možnosti, ako by aplikácia šla vylepšovať a ďalej zvyšovať efektivitu algoritmu. V prípade, že sa bude ďalej vyvíjať, má potenciál výrazným spôsobom zlepšiť výsledky používateľa v hre, a tým aj zlepšiť jeho celkový zážitok.
   },
   faculty={FIT}, % FIT/FEKT/FSI/FA/FCH/FP/FAST/FAVU/USI/DEF
 %   faculty.cs={Fakulta informačních technologií}, % Fakulta v češtině - pro využití této položky výše zvolte fakultu DEF / Faculty in Czech - for use of this entry select DEF above
@@ -200,42 +201,42 @@
   \setlength{\parskip}{0pt}
 
   {\hypersetup{hidelinks}\tableofcontents}
-
+  
   % Seznam obrazku a tabulek (pokud prace obsahuje velke mnozstvi obrazku, tak se to hodi)
   % List of figures and list of tables (if the thesis contains a lot of pictures, it is good)
   \ifczech
-  \renewcommand\listfigurename{Seznam obrázků}
+    \renewcommand\listfigurename{Seznam obrázků}
   \fi
   \ifslovak
-  \renewcommand\listfigurename{Zoznam obrázkov}
+    \renewcommand\listfigurename{Zoznam obrázkov}
   \fi
   % \listoffigures
-
+  
   \ifczech
-  \renewcommand\listtablename{Seznam tabulek}
+    \renewcommand\listtablename{Seznam tabulek}
   \fi
   \ifslovak
-  \renewcommand\listtablename{Zoznam tabuliek}
+    \renewcommand\listtablename{Zoznam tabuliek}
   \fi
   % \listoftables 
 
   \ifODSAZ
-  \setlength{\parskip}{0.5\bigskipamount}
+    \setlength{\parskip}{0.5\bigskipamount}
   \else
-  \setlength{\parskip}{0pt}
+    \setlength{\parskip}{0pt}
   \fi
 
   % vynechani stranky v oboustrannem rezimu
   % Skip the page in the two-sided mode
   \iftwoside
-  \cleardoublepage
+    \cleardoublepage
   \fi
 
   % Text prace / Thesis text
   % ----------------------------------------------
 %   \input{WIP}
   \input{projekt-01-kapitoly-chapters}
-
+  
   % Kompilace po částech (viz výše, nutno odkomentovat)
   % Compilation piecewise (see above, it is necessary to uncomment it)
   %\subfile{projekt-01-uvod-introduction}
@@ -245,48 +246,48 @@
 
   % Pouzita literatura / Bibliography
   % ----------------------------------------------
-  \ifslovak
+\ifslovak
   \makeatletter
   \def\@openbib@code{\addcontentsline{toc}{chapter}{Literatúra}}
   \makeatother
   \bibliographystyle{bib-styles/slovakiso}
-  \else
+\else
   \ifczech
-  \makeatletter
-  \def\@openbib@code{\addcontentsline{toc}{chapter}{Literatura}}
-  \makeatother
-  \bibliographystyle{bib-styles/czechiso}
-  \else
-  \makeatletter
-  \def\@openbib@code{\addcontentsline{toc}{chapter}{Bibliography}}
-  \makeatother
-  \bibliographystyle{bib-styles/englishiso}
+    \makeatletter
+    \def\@openbib@code{\addcontentsline{toc}{chapter}{Literatura}}
+    \makeatother
+    \bibliographystyle{bib-styles/czechiso}
+  \else 
+    \makeatletter
+    \def\@openbib@code{\addcontentsline{toc}{chapter}{Bibliography}}
+    \makeatother
+    \bibliographystyle{bib-styles/englishiso}
   %  \bibliographystyle{alpha}
   \fi
-  \fi
+\fi
   \begin{flushleft}
-    \bibliography{projekt-20-literatura-bibliography}
+  \bibliography{projekt-20-literatura-bibliography}
   \end{flushleft}
 
   % vynechani stranky v oboustrannem rezimu
   % Skip the page in the two-sided mode
   \iftwoside
-  \cleardoublepage
+    \cleardoublepage
   \fi
 
   % Prilohy / Appendices
   % ---------------------------------------------
   \appendix
-  \ifczech
+\ifczech
   \renewcommand{\appendixpagename}{Přílohy}
   \renewcommand{\appendixtocname}{Přílohy}
   \renewcommand{\appendixname}{Příloha}
-  \fi
-  \ifslovak
+\fi
+\ifslovak
   \renewcommand{\appendixpagename}{Prílohy}
   \renewcommand{\appendixtocname}{Prílohy}
   \renewcommand{\appendixname}{Príloha}
-  \fi
+\fi
 %  \appendixpage
 
 % vynechani stranky v oboustrannem rezimu
@@ -294,11 +295,11 @@
 %\iftwoside
 %  \cleardoublepage
 %\fi
-
-  \ifslovak
+  
+\ifslovak
 %  \section*{Zoznam príloh}
 %  \addcontentsline{toc}{section}{Zoznam príloh}
-  \else
+\else
   \ifczech
 %    \section*{Seznam příloh}
 %    \addcontentsline{toc}{section}{Seznam příloh}
@@ -306,28 +307,28 @@
 %    \section*{List of Appendices}
 %    \addcontentsline{toc}{section}{List of Appendices}
   \fi
-  \fi
+\fi
   \startcontents[chapters]
   \setlength{\parskip}{0pt}
   % seznam příloh / list of appendices
   % \printcontents[chapters]{l}{0}{\setcounter{tocdepth}{2}}
-
+  
   \ifODSAZ
-  \setlength{\parskip}{0.5\bigskipamount}
+    \setlength{\parskip}{0.5\bigskipamount}
   \else
-  \setlength{\parskip}{0pt}
+    \setlength{\parskip}{0pt}
   \fi
-
+  
   % vynechani stranky v oboustrannem rezimu
   \iftwoside
-  \cleardoublepage
+    \cleardoublepage
   \fi
-
+  
   % Přílohy / Appendices
   \input{projekt-30-prilohy-appendices}
-
+  
   % Kompilace po částech (viz výše, nutno odkomentovat)
   % Compilation piecewise (see above, it is necessary to uncomment it)
   %\subfile{projekt-30-prilohy-appendices}
-
+  
 \end{document}

@@ -16,29 +16,29 @@ There will be 2 outputs of the thesis. First will be a web application, where us
 
 Web application will offer many useful features for users to analyze their squad, make transfers and substitutions. It will provide some of the most popular features on existing websites. I will also aim to add some features, that are not available in existing solutions, but I think they can add to the user experience and help them in the game. The web application will also aim to help users understand how the prediction works and why it predicted the scores they got.
 
-Fantasy sports, their history, and rules of Fantasy Premier League application are described in Chapter \ref{chpt2}. Existing predictor applications and what they offer to the user are described in Chapter \ref{chpt3}. In the next Chapter \ref{chpt4}, there is a detailed information about what machine learning techniques were used for prediction. Chapter \ref{chpt5} consists of the design of the web application with user requirements. There is also a comparison of different machine learning libraries. Later I describe the dataset I used for creating the prediction algorithm, and how I chose which features are more useful than the others. The Chapter \ref{chpt6} describes the process of implementation of both the predictor and the graphical user interface. There is also more information about how the prediction model determines the predictions. The Chapter \ref{chpt7} contains information about experiments with the model and the web application. It also contains evaluation of the predictions and compares their success rate to results that I got without using the predictor during current season.
+Fantasy sports, their history, and rules of Fantasy Premier League application are described in Chapter~\ref{chpt2}. Existing predictor applications and what they offer to the user are described in Chapter~\ref{chpt3}. In the next Chapter~\ref{chpt4}, there is a detailed information about what machine learning techniques were used for prediction. Chapter~\ref{chpt5} consists of the design of the web application with user requirements. There is also a comparison of different machine learning libraries. Later I describe the dataset I used for creating the prediction algorithm, and how I chose which features are more useful than the others. The Chapter~\ref{chpt6} describes the process of implementation of both the predictor and the graphical user interface. There is also more information about how the prediction model determines the predictions. The Chapter~\ref{chpt7} contains information about experiments with the model and the web application. It also contains evaluation of the predictions and compares their success rate to results that I got without using the predictor during current season.
 
 \chapter{Fantasy sports}\label{chpt2}
 
-Fantasy sports are games, now mostly online, where users create teams of real-world players of a professional sport. The most common are football, baseball, American football, basketball and cricket fantasy sports. Players are assigned points based on the performance of chosen players in real-life fixtures. Every fantasy sport has its scoring system, and it awards the user’s team the total points of his team’s players. Since there are many fantasy leagues and apps, points are awarded differently in each of them. Most sophisticated ones have developed web or mobile application for scoring and team selection. But there are still simple ones where the “league coordinator” awards points manually and controls his local league. In fantasy sports, lots of real-life managerial responsibilities are simulated, such as transferring players, injuries, suspensions and more. There are mainly two kinds of fantasy sports formats, season-long and daily. A Fantasy Sports \& Gaming Association\footnote{\url{https://thefsga.org/}} research \cite{fsga} from 2019 stated that in 2017 the industry had around 60 million players in the United States and Canada.
+Fantasy sports are games, now mostly online, where users create teams of real-world players of a professional sport. The most common are football, baseball, American football, basketball and cricket fantasy sports. Players are assigned points based on the performance of chosen players in real-life fixtures. Every fantasy sport has its scoring system, and it awards the user’s team the total points of his team’s players. Since there are many fantasy leagues and apps, points are awarded differently in each of them. Most sophisticated ones have developed web or mobile application for scoring and team selection. But there are still simple ones where the “league coordinator” awards points manually and controls his local league. In fantasy sports, lots of real-life managerial responsibilities are simulated, such as transferring players, injuries, suspensions and more. There are mainly two kinds of fantasy sports formats, season-long and daily. A Fantasy Sports \& Gaming Association\footnote{\url{https://thefsga.org/}} research~\cite{fsga} from 2019 stated that in 2017 the industry had around 60 million players in the United States and Canada.
 
 \section{Background}
     
-Picking real players and running fantasy sports competitions is not a new concept, it is around since the 1960s. However, then it was still organized sporadically and for fun. The first fantasy football league dates itself to 1962 \cite{newsnet} in Oakland, USA. Around that time, the first baseball fantasy league also started \cite{schwarz}. First, fantasy sports gained more popularity in the 1980s, when some sports journalists started playing together, so it spread some media interest. At this time, a large number of companies started calculating statistics for fantasy leagues and faxing results to their users. In the 1990s \cite{fsga}, around 3 million people were playing. The growth in popularity in these games is plotted in Figure \ref{numberOfPlayers}.
+Picking real players and running fantasy sports competitions is not a new concept, it is around since the 1960s. However, then it was still organized sporadically and for fun. The first fantasy football league dates itself to 1962~\cite{newsnet} in Oakland, USA. Around that time, the first baseball fantasy league also started~\cite{schwarz}. First, fantasy sports gained more popularity in the 1980s, when some sports journalists started playing together, so it spread some media interest. At this time, a large number of companies started calculating statistics for fantasy leagues and faxing results to their users. In the 1990s~\cite{fsga}, around 3 million people were playing. The growth in popularity in these games is plotted in Figure~\ref{numberOfPlayers}.
 
 The evolution of technology allowed players to play from virtually anywhere. With smartphones, users can check or change their teams very quickly. Also, live drafting became very popular.
-With the coming of the internet, many magazines and websites started covering fantasy football, and also new sports were added, for example, hockey and basketball. A website called RotoNews\footnote{\url{https://rotowire.com/}} (now renamed to RotoWire) was one of the first \cite{rotowire} to cover fantasy sports. And many others followed. The boom of fantasy sports can be closely connected to the boom of the internet. At this time many companies moved from free to paid models. In 2013 a Forbes article \cite{forbes} reported that 32 million Americans did spend 467 dollars a person playing fantasy sports. Since 2012 \cite{mobile} with the emergence of mobile applications, a lot of them were created for fantasy sports, for playing and for predictions as well.
+With the coming of the internet, many magazines and websites started covering fantasy football, and also new sports were added, for example, hockey and basketball. A website called RotoNews\footnote{\url{https://rotowire.com/}} (now renamed to RotoWire) was one of the first~\cite{rotowire} to cover fantasy sports. And many others followed. The boom of fantasy sports can be closely connected to the boom of the internet. At this time many companies moved from free to paid models. In 2013 a Forbes article~\cite{forbes} reported that 32 million Americans did spend 467 dollars a person playing fantasy sports. Since 2012~\cite{mobile} with the emergence of mobile applications, a lot of them were created for fantasy sports, for playing and for predictions as well.
 
 \begin{figure*}[!htb]
   \centering
   \includegraphics[width=0.9\linewidth]{obrazky-figures/numberOfPlayers.PNG}\\[1pt]
-  \caption{Estimated number of fantasy sports players according to 2019 research since year 1988. \cite{fsga}}
+  \caption{Estimated number of fantasy sports players according to 2019 research since year 1988.~\cite{fsga}}
   \label{numberOfPlayers}
 \end{figure*}
 
-It was believed you have to be a sports fan to ever win at fantasy sports games. In 2010 \cite{rozek} man named John Rozek was named the best fantasy football player in the world, without being a football fan. He was just enthusiastic about statistics and analyzing a~particular problem. He had only a moderate knowledge of football at the time. Now when most of the fantasy sports are done by computers, and scoring could be done quickly, more scoring methods were created. All of the player statistics are collected automatically and you don’t even need to know the people who you are in a fantasy league with. While it motivated a lot of users to watch sports and other teams, fantasy sports have now become a very successful business.
+It was believed you have to be a sports fan to ever win at fantasy sports games. In 2010~\cite{rozek} man named John Rozek was named the best fantasy football player in the world, without being a football fan. He was just enthusiastic about statistics and analyzing a~particular problem. He had only a moderate knowledge of football at the time. Now when most of the fantasy sports are done by computers, and scoring could be done quickly, more scoring methods were created. All of the player statistics are collected automatically and you don’t even need to know the people who you are in a fantasy league with. While it motivated a lot of users to watch sports and other teams, fantasy sports have now become a very successful business.
 
-While fantasy sports are very popular today, one question is asked very frequently. Are fantasy games gambling or not? To answer this question, MIT researchers \cite{gastmans} found out, that fantasy sports games are a game of skill, rather than luck, even though a little luck is needed. Examples of some games that are pure luck or pure skill can be found in Table \ref{luckSkill}. They analyzed thousands of fantasy games over many seasons. To win, players need to have a good knowledge of rules, injuries, stats, weather and other factors. It is not based on pure chance. For companies, which make revenue of fantasy sports, the fantasy games must be classified as a game of skill. In many states, betting on sports is illegal. The factors that influenced this decision are that if it was a game of luck, every player should have the same chance of winning. But this is not true, people who play more games have a statistically bigger chance of getting more points. Also, in skill-based games, a player’s performance should be persistent over multiple rounds and his actions should have an impact on a game. Both of which are true for fantasy sports. So the conclusion of the research was, that they are mostly about skill and little about luck. Now, most of the fantasy sports are free, companies make revenue mostly on advertisements.
+While fantasy sports are very popular today, one question is asked very frequently. Are fantasy games gambling or not? To answer this question, MIT researchers~\cite{gastmans} found out, that fantasy sports games are a game of skill, rather than luck, even though a little luck is needed. Examples of some games that are pure luck or pure skill can be found in Table~\ref{luckSkill}. They analyzed thousands of fantasy games over many seasons. To win, players need to have a good knowledge of rules, injuries, stats, weather and other factors. It is not based on pure chance. For companies, which make revenue of fantasy sports, the fantasy games must be classified as a game of skill. In many states, betting on sports is illegal. The factors that influenced this decision are that if it was a game of luck, every player should have the same chance of winning. But this is not true, people who play more games have a statistically bigger chance of getting more points. Also, in skill-based games, a player’s performance should be persistent over multiple rounds and his actions should have an impact on a game. Both of which are true for fantasy sports. So the conclusion of the research was, that they are mostly about skill and little about luck. Now, most of the fantasy sports are free, companies make revenue mostly on advertisements.
 
 \begin{table}[!htb]
 	\centering
@@ -53,13 +53,13 @@ While fantasy sports are very popular today, one question is asked very frequent
 \end{table}
 
 
-Origins of the online fantasy sports game are based in North America, where it was first offered by Yahoo in 1999 \cite{yahoo}, other portals like ESPN and CBS followed shortly. Watching and following games through fantasy sports has made many new fans of the respective sports. The concept of outsmarting your opponents using your knowledge and the overall excitement of the game is what brings all those people to play them. As a result of this emergence of new followers, it created interest in stakeholders of the leagues, clubs, media, and sponsors. The possibility of monetizing this interest is what makes these games so attractive.
+Origins of the online fantasy sports game are based in North America, where it was first offered by Yahoo in 1999~\cite{yahoo}, other portals like ESPN and CBS followed shortly. Watching and following games through fantasy sports has made many new fans of the respective sports. The concept of outsmarting your opponents using your knowledge and the overall excitement of the game is what brings all those people to play them. As a result of this emergence of new followers, it created interest in stakeholders of the leagues, clubs, media, and sponsors. The possibility of monetizing this interest is what makes these games so attractive.
 
 \section{Types of fantasy sports}
 
-There are two main types: season-long and daily fantasy sports games. In LIVE Production research \cite{live}, almost 87\% of the respondents said they prefer to play free season-long fantasy sports. But it has to be said the research was conducted in Europe, where daily fantasy (DFS) is not as popular as in other parts of the world (United States, Canada, Asia, Africa).
+There are two main types: season-long and daily fantasy sports games. In LIVE Production research~\cite{live}, almost 87\% of the respondents said they prefer to play free season-long fantasy sports. But it has to be said the research was conducted in Europe, where daily fantasy (DFS) is not as popular as in other parts of the world (United States, Canada, Asia, Africa).
 
-Most popular sports according to website WordAtlas\footnote{\url{https://www.worldatlas.com/}}, are soccer – 4 billion fans, cricket 2.5B, field hockey 2B \cite{sawe}. Interestingly, basketball is 7th, baseball 8th, and American football with ice hockey are not even in the top 10. The whole top 10 can be found in Figure \ref{globalFollowing}. It shows that the popularity of sports does not correlate with its popularity in fantasy sports. The most popular fantasy sports are American football, basketball, baseball, hockey, and football. This is true for America, in Europe it is mostly soccer.
+Most popular sports according to website WordAtlas\footnote{\url{https://www.worldatlas.com/}}, are soccer – 4 billion fans, cricket 2.5B, field hockey 2B~\cite{sawe}. Interestingly, basketball is 7th, baseball 8th, and American football with ice hockey are not even in the top 10. The whole top 10 can be found in Figure~\ref{globalFollowing}. It shows that the popularity of sports does not correlate with its popularity in fantasy sports. The most popular fantasy sports are American football, basketball, baseball, hockey, and football. This is true for America, in Europe it is mostly soccer.
 
 \begin{figure*}[!htb]
   \centering
@@ -90,7 +90,7 @@ The Premier League is a top tier of the English football pyramid. It consists of
 
 \subsection*{Start of play}
 
-Rules of the FPL are similar to most of the fantasy football apps. The user has a budget of 100 million pounds to build a squad of 15 players. A squad must consist of 2 goalkeepers, 5 defenders, 5 midfielders and 3 forwards. A maximum of 3 players can be chosen from one club. Only current Premier League players can be selected. Every player has his value. This value depends on player reputation, results, performance, and on market situation. If a lot of users are buying a player, his value rises and if a lot of them are selling the player, his value decreases. The most expensive players are usually the attackers. Example squad from the FPL game can be found in Figure \ref{fplSquad}.
+Rules of the FPL are similar to most of the fantasy football apps. The user has a budget of 100 million pounds to build a squad of 15 players. A squad must consist of 2 goalkeepers, 5 defenders, 5 midfielders and 3 forwards. A maximum of 3 players can be chosen from one club. Only current Premier League players can be selected. Every player has his value. This value depends on player reputation, results, performance, and on market situation. If a lot of users are buying a player, his value rises and if a lot of them are selling the player, his value decreases. The most expensive players are usually the attackers. Example squad from the FPL game can be found in Figure~\ref{fplSquad}.
 
 \begin{figure*}[!htb]
   \centering
@@ -106,7 +106,7 @@ Then users are waiting for real-life fixtures to finish. Premier League is usual
 
 \subsection*{Scoring}
 
-Players are awarded points for their performance on the pitch. There are different scoring systems for each position of the team. There are also points deducted for any offenses or misconduct in the game, or just for poor performance. In case some of the starting eleven don’t play, the reserve players are awarded points. All the total points of 11 players are then added to the user’s point tally for the current round. Detailed scoring points can be found in Table \ref{tbl1}. Example scoring table from the FPL game is shown in Figure \ref{fplScore}.
+Players are awarded points for their performance on the pitch. There are different scoring systems for each position of the team. There are also points deducted for any offenses or misconduct in the game, or just for poor performance. In case some of the starting eleven don’t play, the reserve players are awarded points. All the total points of 11 players are then added to the user’s point tally for the current round. Detailed scoring points can be found in Table~\ref{tbl1}. Example scoring table from the FPL game is shown in Figure~\ref{fplScore}.
 
 \begin{figure*}[!htb]
   \centering
@@ -116,12 +116,12 @@ Players are awarded points for their performance on the pitch. There are differe
 \end{figure*}
 
 
-There are also bonus points. Three best players in each match get awarded bonus points. They get 3,2,1 points respectively, and when there is a tie, points are split. Bonus points are awarded for various events in the game, detailed view can be found in Table \ref{tbl2}.
+There are also bonus points. Three best players in each match get awarded bonus points. They get 3,2,1 points respectively, and when there is a tie, points are split. Bonus points are awarded for various events in the game, detailed view can be found in Table~\ref{tbl2}.
 
 
 \subsection*{Transfers}
 
-Between rounds, users are allowed one transfer. On some occasions two transfers, if they did not use last round’s transfer token. These transfers also need to be within boundaries of the 100 million budget cap. Every other transfer, if needed, costs 4 points. Transfer market from the FPL game is shown in Figure \ref{fplTransfers}.
+Between rounds, users are allowed one transfer. On some occasions two transfers, if they did not use last round’s transfer token. These transfers also need to be within boundaries of the 100 million budget cap. Every other transfer, if needed, costs 4 points. Transfer market from the FPL game is shown in Figure~\ref{fplTransfers}.
 
 \begin{figure*}[!htb]
   \centering
@@ -252,11 +252,11 @@ The great thing about Fix is that it uses direct login logic from the Fantasy Pr
 These are the features of the app, that are available for all the users for free. Most of these free features are used very often by users and should be available in every fantasy sports prediction app.
 
 \begin{itemize}
-    \item Dugout is a unique feature for Fix, it is a dashboard, where user gets comprehensive information about the current status of the game. It contains information about players with the most overall increase in prizes, to see if the user wants to add them to his squad. It also shows some of the recommended transfers with the current market situation. It shows how the squad fared in the last round, who had a great week or bad one. It also shows short information about predicted results in next week and possible suspensions. Parts of the Dugout screen can be found in Figures \ref{fix1} and \ref{fix2}.
+    \item Dugout is a unique feature for Fix, it is a dashboard, where user gets comprehensive information about the current status of the game. It contains information about players with the most overall increase in prizes, to see if the user wants to add them to his squad. It also shows some of the recommended transfers with the current market situation. It shows how the squad fared in the last round, who had a great week or bad one. It also shows short information about predicted results in next week and possible suspensions. Parts of the Dugout screen can be found in Figures~\ref{fix1} and~\ref{fix2}.
     \item The assistant manager is a classic feature, found in most of the predictors now. In this window, the user can see his squad and predicted transfers and changes in starting eleven for the next week. It also shows who should the user select for captaincy. This screen allows the user to browse the transfer market with a lot of filters to find the perfect player for his squad. Some premium features are also available on this page, but I will write about them later.
     \item Another free and popular feature is the Table of Injured players, where users can see players currently injured, with predicted time out of the game. The table of suspended players is also available. 
     \item On another screen, the user can see in a comprehensive table how the prizes of players are moving up and down, which may help him select who to buy or sell. This proves to be a popular feature for users, who like to find cheap gems, players who deliver good points for a low cost. Here user can also find some graphs with the top transfers in the game, which is more like a statistical feature, but some users find it helpful.
-    \item There are also next round previews, player statistics, and league table as some of the more general features. Preview of some of the most popular features can be found in~Figure \ref{fix3}.
+    \item There are also next round previews, player statistics, and league table as some of the more general features. Preview of some of the most popular features can be found in~Figure~\ref{fix3}.
     \item One of the useful features is an option to have notifications delivered to your phone or mailbox, with information about predictions for the next round and some articles in the blog section. This is mostly useful for users, who don’t like to spend much time playing, or forgot about the game week.
 
 \end{itemize}
@@ -279,7 +279,7 @@ Fix offers a lot more features for premium users, and while the free version is 
 
 One of the great premium features is also predicting the opponent’s starting eleven. This can have a big impact on the user’s predicted lineup, as he can adjust it based on the opponent's weaknesses. There is also an analytical tool for analyzing fixture difficulty for the next game weeks.
 
-Some premium features don’t necessarily help users with the game but can be useful. For example, the option to export some subset of players statistics, comparing the players in a detailed way, whole game statistics like most used players, captains, formations, and many more. Option to see most user players is shown in Figure \ref{fix4}.
+Some premium features don’t necessarily help users with the game but can be useful. For example, the option to export some subset of players statistics, comparing the players in a detailed way, whole game statistics like most used players, captains, formations, and many more. Option to see most user players is shown in Figure~\ref{fix4}.
 
 \begin{figure*}[!htb]
   \centering
@@ -292,10 +292,10 @@ Fix is by far the most advanced tool currently available. While it has many grea
 
 \subsection*{Fantasy Overlord}
 
-Fantasy Overlord\footnote{\url{https://fantasyoverlord.com/FPL}} is a simple website based on an article \cite{overlord} about the theory, that Artificial Intelligence can beat people in fantasy football. It offers some prediction functionality as well as statistics. It has only a web version.
+Fantasy Overlord\footnote{\url{https://fantasyoverlord.com/FPL}} is a simple website based on an article~\cite{overlord} about the theory, that Artificial Intelligence can beat people in fantasy football. It offers some prediction functionality as well as statistics. It has only a web version.
 In Overlord, users can import teams from FPL by using their FPL ID, so it does not have the FPL connection as Fix does. Users can predict their team’s performance in any number of weeks in advance.
 
-It offers all the basic functions like team changes and transfer recommendations. It also offers Overlord’s picks for a Dream Team for a current round, which is just for statistical purposes as users cannot overhaul their whole team anyway (apart from using bonus chips). It also shows all the upcoming fixtures in the next game week, trends for player prizes and popularity changes, and also injury and suspensions table. Predictions for team and player points can be found in Forecasts part of the application. This is shown in Figure \ref{overlord2} and Figure \ref{overlord3}.
+It offers all the basic functions like team changes and transfer recommendations. It also offers Overlord’s picks for a Dream Team for a current round, which is just for statistical purposes as users cannot overhaul their whole team anyway (apart from using bonus chips). It also shows all the upcoming fixtures in the next game week, trends for player prizes and popularity changes, and also injury and suspensions table. Predictions for team and player points can be found in Forecasts part of the application. This is shown in Figure~\ref{overlord2} and Figure~\ref{overlord3}.
 
 \begin{figure*}[!htb]
   \centering
@@ -311,7 +311,7 @@ It offers all the basic functions like team changes and transfer recommendations
   \label{overlord3}
 \end{figure*}
 
-One unique feature is called Overlord’s picks, which shows top players predicted for a~few upcoming weeks in every position. It is very useful for planning transfers ahead. It also offers an option to download historical data, presumably for users who want to create their prediction algorithms. Part of the Overlord's picks screen is shown in Figure \ref{overlord1}.
+One unique feature is called Overlord’s picks, which shows top players predicted for a~few upcoming weeks in every position. It is very useful for planning transfers ahead. It also offers an option to download historical data, presumably for users who want to create their prediction algorithms. Part of the Overlord's picks screen is shown in Figure~\ref{overlord1}.
 
 
 \begin{figure*}[!htb]
@@ -368,9 +368,9 @@ In this chapter, I will delve more into the theoretical approach to building mod
 
 
 \section{Introduction}
-Machine learning \cite{nasteski} is a large field in information technology. It is also presented in many other scientific fields, like statistics, artificial intelligence, neurobiology, and more. Machine learning is the study of the algorithms, that are using data to create models, and these models are used to learn from the data or for predicting new data values. This field is closely connected with statistics, that also can make predictions on the data. It is about creating algorithms, that can find statistical patterns in the data, they are simulating the approach, that a human would take to the particular problem.
+Machine learning~\cite{nasteski} is a large field in information technology. It is also presented in many other scientific fields, like statistics, artificial intelligence, neurobiology, and more. Machine learning is the study of the algorithms, that are using data to create models, and these models are used to learn from the data or for predicting new data values. This field is closely connected with statistics, that also can make predictions on the data. It is about creating algorithms, that can find statistical patterns in the data, they are simulating the approach, that a human would take to the particular problem.
 
-The modern definition of the term machine learning is provided by Tom M. Mitchell \cite{mitchell}: ``A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E''.
+The modern definition of the term machine learning is provided by Tom M. Mitchell~\cite{mitchell}: ``A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E''.
 
 The machine learning algorithms are divided into two big categories and a few small ones. The two largest groups are supervised and unsupervised learning.
 
@@ -382,8 +382,8 @@ The machine learning algorithms are divided into two big categories and a few sm
 \end{itemize}
 
 \section{Supervised learning}
-Supervised learning is a machine learning method, that takes labeled training data (these data have predetermined output values), and creates the input-output information of the system \cite{Liu2012, mitchell}. This information is then used to provide ways to learn about the system or to predict new data values. The goal of the supervised learning algorithm is to create a function, that can provide output information for any new input. 
-Supervised learning algorithms are often used for predicting sports results because the past statistical data can be easily transformed into the labeled training data for the prediction model. For example, a player who scored a lot of goals in the past should be predicted to score a lot of goals in the future too. The concept of solving a supervised learning problem is illustrated in Figure \ref{supervised}.
+Supervised learning is a machine learning method, that takes labeled training data (these data have predetermined output values), and creates the input-output information of the system~\cite{Liu2012, mitchell}. This information is then used to provide ways to learn about the system or to predict new data values. The goal of the supervised learning algorithm is to create a function, that can provide output information for any new input. 
+Supervised learning algorithms are often used for predicting sports results because the past statistical data can be easily transformed into the labeled training data for the prediction model. For example, a player who scored a lot of goals in the past should be predicted to score a lot of goals in the future too. The concept of solving a supervised learning problem is illustrated in Figure~\ref{supervised}.
 This is the optimal workflow to solve a supervised learning problem:
 
 \begin{itemize}
@@ -413,7 +413,7 @@ There are two types of supervised learning problems:
 
 In this thesis, supervised learning will be used to train the model to predict the future performance of a player. If the model predicts the excellent performance of a player and he will perform badly, in the next iteration of learning it will be taught to adjust the way it calculates the prediction. The regression models will be used, as the algorithm will predict the expected points for every player, given his past statistical data.
 
-\section{Unsupervised learning}
+\subsection*{Unsupervised learning}
 Unsupervised learning is another concept of how to approach the machine learning problems. This approach is useful when there is little or no information about how the results should look like. There is no feedback about the observations because there is no teacher to provide error flags.
 There are many ways to solve an unsupervised learning problem, such as clustering, expectation-maximization algorithm, or method of moments.
 
@@ -421,7 +421,7 @@ There are many ways to solve an unsupervised learning problem, such as clusterin
 The regression algorithms are used to predict the output value based on the input value and learned input-output relationships. The result is represented as a continuous function, typically a real number. Here are few examples of the regression algorithms, for example linear, polynomial, or logistic regression.
 
 \subsection*{Linear regression}
-Linear regression \cite{shalabh, mit} was the first type of regression to be studied in-depth because the models that depend linearly on their parameters were the easiest to visualize. In the linear regression model, the data is represented as a linear function. There can be one or multiple variables in the linear regression model. If there is only one variable in the model, it is called \textit{simple linear regression} or \textit{univariate linear regression}. The variable, that the model is predicting is called \textit{dependent} variable and the others are called \textit{independent} variables. A~graphical example can be found in Figure \ref{linear}. Despite its simplicity, it has many practical uses, for example in computer science, medicine and many more.
+Linear regression~\cite{shalabh, mit} was the first type of regression to be studied in-depth because the models that depend linearly on their parameters were the easiest to visualize. In the linear regression model, the data is represented as a linear function. There can be one or multiple variables in the linear regression model. If there is only one variable in the model, it is called \textit{simple linear regression} or \textit{univariate linear regression}. The variable, that the model is predicting is called \textit{dependent} variable and the others are called \textit{independent} variables. A~graphical example can be found in Figure~\ref{linear}. Despite its simplicity, it has many practical uses, for example in computer science, medicine and many more.
 \newpage
 Consider that there is a univariate linear regression model:
 
@@ -449,12 +449,12 @@ The values of $(\beta_1$, \dots ,$\beta_p)$ are generally unknown in practice an
 
 \newpage
 \subsection*{Polynomial regression}
-For some problems, the data cannot be easily interpolated using a straight line, but the relationship between the variables is curvilinear. The regression algorithm that solves these problems is called \textit{polynomial regression} \cite{shalabh2}. The polynomial regression function looks like this:
+For some problems, the data cannot be easily interpolated using a straight line, but the relationship between the variables is curvilinear. The regression algorithm that solves these problems is called \textit{polynomial regression}~\cite{shalabh2}. The polynomial regression function looks like this:
 
 \begin{align}
     y = \beta_0 + \beta_1x + \beta_2x^2 + \dots + \beta_kx^k + \epsilon
 \end{align}
-where the notation is the same as in the linear regression. Linear regression is therefore a~special case of polynomial regression, where the degree of a polynomial (largest exponent) is 1. The difference between the polynomial of degree 1 (linear regression) and larger polynomial can be found in Figure \ref{polyn}.
+where the notation is the same as in the linear regression. Linear regression is therefore a~special case of polynomial regression, where the degree of a polynomial (largest exponent) is 1. The difference between the polynomial of degree 1 (linear regression) and larger polynomial can be found in Figure~\ref{polyn}.
 
 The polynomial models are used to describe complex relationships between the variables. The main disadvantage of them is that for very large problems, the polynomial function can be very difficult to find, and the model can be difficult to train very well.
 
@@ -466,11 +466,11 @@ The polynomial models are used to describe complex relationships between the var
 \end{figure*}
 
 \section{Neural networks}
-Neural networks \cite{mirza, Nyquist2017FootballMP} are an example of another concept of how to tackle machine learning problems. They come from the field of biology where every brain cell (neuron) takes input data, processes them, and sends them to the output (another neuron). All the brain cells are interconnected and they pass information between each other. Artificial neural networks in computer science work on a similar principle, they represent the software implementation of the brain structure. Neural networks are now applied to a large number of problems in many scientific areas, engineering, medicine, or financing.
+Neural networks~\cite{mirza, Nyquist2017FootballMP} are an example of another concept of how to tackle machine learning problems. They come from the field of biology where every brain cell (neuron) takes input data, processes them, and sends them to the output (another neuron). All the brain cells are interconnected and they pass information between each other. Artificial neural networks in computer science work on a similar principle, they represent the software implementation of the brain structure. Neural networks are now applied to a large number of problems in many scientific areas, engineering, medicine, or financing.
 
 \subsection*{Artificial neural networks}
-Artificial neural networks are used to mimic the human brain inside the computer, they are used to process the information in the same way that a human would. The human neuron receives information from other neurons via \textit{synapses} on its \textit{dendrites}, and sends the output information to other neuron via the \textit{axon} fibre. In artificial neural networks (ANNs), this behavior is defined differently \cite{gurney}.
-The neurons are called \textit{nodes} or \textit{units}. All the synapses (inputs) are modeled with \textit{weights}, so each input can be multiplied by a~weight before processing. All the weighted input signals are then added together to supply a node \textit{activation}. When the activation value is higher than the threshold value, the unit produces the signal that means that the unit is activated. Every unit can produce one of the two values: high or low value, 1 or 0, True or False. High value can only be outputted, when the activation function returns value higher than the threshold. This threshold can be different for every unit. The unit can be represented as a function \eqref{eq-neuron}, where $K$ is an activation function, $i$ is the number of inputs and $w_i$ is a weight of a input with an index $i$. $f(x)$ represents the output of the neuron. The example unit is also illustrated in Figure \ref{unit}.
+Artificial neural networks are used to mimic the human brain inside the computer, they are used to process the information in the same way that a human would. The human neuron receives information from other neurons via \textit{synapses} on its \textit{dendrites}, and sends the output information to other neuron via the \textit{axon} fibre. In artificial neural networks (ANNs), this behavior is defined differently~\cite{gurney}.
+The neurons are called \textit{nodes} or \textit{units}. All the synapses (inputs) are modeled with \textit{weights}, so each input can be multiplied by a~weight before processing. All the weighted input signals are then added together to supply a node \textit{activation}. When the activation value is higher than the threshold value, the unit produces the signal that means that the unit is activated. Every unit can produce one of the two values: high or low value, 1 or 0, True or False. High value can only be outputted, when the activation function returns value higher than the threshold. This threshold can be different for every unit. The unit can be represented as a function \eqref{eq-neuron}, where $K$ is an activation function, $i$ is the number of inputs and $w_i$ is a weight of a input with an index $i$. $f(x)$ represents the output of the neuron. The example unit is also illustrated in Figure~\ref{unit}.
 
 \begin{equation}
     f(x) = K \left( \sum_{i} w_i \right)
@@ -485,7 +485,7 @@ The neurons are called \textit{nodes} or \textit{units}. All the synapses (input
 \end{figure*}
 \FloatBarrier
 
-The term neural network refers to a system of artificial units. The connections between the units vary for every type of neural network. Not every unit must be connected to all the other units. One example of an artificial neural network can be found in Figure \ref{neural}, where each unit is represented as a circle, with implicit weights.
+The term neural network refers to a system of artificial units. The connections between the units vary for every type of neural network. Not every unit must be connected to all the other units. One example of an artificial neural network can be found in Figure~\ref{neural}, where each unit is represented as a circle, with implicit weights.
 Units are arranged in layers, where the input signal travels from left to right. The input layer represents the signals, that are fed to the network. In the hidden layer, that can be one or more, the inputs are modified using the weights of the inputs, and the new value is sent to the output layer. Output can be also weighed and modified. This is called a \texttt{feedforward} pattern, but there are more available. 
 
 For example, with \texttt{backpropagation} pattern, the signal can loop back to the previous layers of the network. There is also no limit to how many units can be a part of the network. The number often depends on the type and difficulty of the problem, that the neural network is aiming to solve. The number of input units is often dependent on the training set. Too many units in the hidden layer can lead to very long computations, but too few can prove ineffective in solving the problem. 
@@ -503,7 +503,7 @@ There is also no right way of how to choose the weights of the input and output 
 
 \subsection*{Recurrent Neural Networks}
 
-Recurrent neural networks \cite{cho2014learning} \cite{zaremba2014recurrent} are a subclass of neural networks that have connections between nodes in the hidden layer, that go backwards in layers. This concept is illustrated in Figure \ref{rnn}. They allow using computed results mid-processing to calculate more precise results. If the network is given a sequence $x = (x_1, x_2, ..., x_T)$, it updates its hidden state by a function: 
+Recurrent neural networks~\cite{cho2014learning, zaremba2014recurrent} are a subclass of neural networks that have connections between nodes in the hidden layer, that go backwards in layers. This concept is illustrated in Figure~\ref{rnn}. They allow using computed results mid-processing to calculate more precise results. If the network is given a sequence $x = (x_1, x_2, ..., x_T)$, it updates its hidden state by a function: 
 
 \begin{equation}
     h_t =
@@ -536,9 +536,9 @@ Once the network is sufficiently trained and produces as few mistakes as possibl
 
 \section{Time series models}
 
-In regular machine learning datasets, time does not play any role. The training dataset is a collection of observations, either labeled or not. But in the time-series dataset, there is an explicit order of the observations. This order is a time dimension. The number of input nodes corresponds to a number of observations in time \cite{RePEc:eee:intfor:v:14:y:1998:i:1:p:35-62}. This concept is used to predict outputs in the future, based on past observations. Time series in this thesis is used to order past player data so see how a player performed over time and can be used to spot patterns in player's statistics.
+In regular machine learning datasets, time does not play any role. The training dataset is a collection of observations, either labeled or not. But in the time-series dataset, there is an explicit order of the observations. This order is a time dimension. The number of input nodes corresponds to a number of observations in time~\cite{RePEc:eee:intfor:v:14:y:1998:i:1:p:35-62}. This concept is used to predict outputs in the future, based on past observations. Time series in this thesis is used to order past player data so see how a player performed over time and can be used to spot patterns in player's statistics.
 
-There are two methods \cite{RePEc:eee:intfor:v:14:y:1998:i:1:p:35-62} that can be performed on the time series data. First is time series analysis \cite{box_1970}, this method is used to develop models for describing and understanding the data. This can be useful when developing statistical models about a particular dataset.
+There are two methods~\cite{RePEc:eee:intfor:v:14:y:1998:i:1:p:35-62} that can be performed on the time series data. First is time series analysis~\cite{box_1970}, this method is used to develop models for describing and understanding the data. This can be useful when developing statistical models about a particular dataset.
 
 The second method is the time-series forecasting, which is used to make predictions from existing past data. Forecasting models are being taught on historical data to make future observations. The very important thing is to not use any data from the future for training the model, it must be completely estimated and predicted by the model. Time series forecasting is best done using the Recurrent neural network described in the previous section. The recurrent neural networks process time series step by step and use they computed state in the next iteration.
 
@@ -547,7 +547,7 @@ Underfitting and overfitting the model are two very common problems, that can ha
 
 Overfitting is the same thing in reverse, when the model fits well on the training set, but performs badly on the validation set. It happens very often, that the model recognizes specific patterns in the training set, not the general ones. 
 
-The term ``Goodness of Fit'' \cite{Jha2011NecessityOG} refers to how good are the model's predicted values compared to the ``true'' values. The model that has learned just on the noise on the training set, and cannot recognize noise in general, is considered as overfitted. The recommended way of developing prediction models is always to start with the simple models and adding more complexity later while testing for overfitting all the time. Both overfitting and underfitting are illustrated in Figure \ref{overfit}.
+The term ``Goodness of Fit''~\cite{Jha2011NecessityOG} refers to how good are the model's predicted values compared to the ``true'' values. The model that has learned just on the noise on the training set, and cannot recognize noise in general, is considered as overfitted. The recommended way of developing prediction models is always to start with the simple models and adding more complexity later while testing for overfitting all the time. Both overfitting and underfitting are illustrated in Figure~\ref{overfit}.
 
 Just detecting the overfitting is not enough, there are several ways to reduce overfitting of the model:
 \begin{itemize}
@@ -577,7 +577,7 @@ Just detecting the overfitting is not enough, there are several ways to reduce o
 \section{Algorithm selection}
 
 
-There are many ways how to utilize machine learning in applications. Many programming languages offer libraries to implement machine learning. Currently, most often used languages for machine learning are Python and R. Other languages used are C/C++, Java, and JavaScript \cite{economics_2019}.
+There are many ways how to utilize machine learning in applications. Many programming languages offer libraries to implement machine learning. Currently, most often used languages for machine learning are Python and R. Other languages used are C/C++, Java, and JavaScript~\cite{economics_2019}.
 For purposes of this thesis, the Java language was chosen as the best candidate. There are a lot of Java-based libraries for machine learning. Many of them are general-purpose but some have specific usages. Neural networks with time-series input data were chosen as the best fit to represent the historical data of football players. It is not the purpose of this thesis to implement the neural network from scratch, but rather to utilize existing solutions, and test various combinations of input data and predicted values. Here is a list of available Java libraries, that provide the options to implement what is needed for this thesis, at least to some degree.
 
 \subsection*{WEKA}\label{WEKA}
@@ -600,7 +600,7 @@ The idea behind WEKA was to provide a uniform interface to the collection of mac
     'Jane', 168.0, ?, ?
 \end{verbatim}
 
-Since version 3.7.3 WEKA has dedicated time-series environments to develop and evaluate forecasting models. It can be installed as a plugin to the WEKA GUI. This time series framework first transforms the data into a form, that can be processed by a standard propositional learning algorithm. It removes temporal ordering by encoding the time dependency as additional input fields. These fields are called \texttt{lagged variables}. After the transformation, any of WEKA's regression algorithms can be applied to learn a model. This approach is often more powerful than classical statistical techniques. An example of the time series plugin in WEKA GUI can be found in Figure \ref{WEKAgui}. This library was chosen as the best available and will be used in the implementation.
+Since version 3.7.3 WEKA has dedicated time-series environments to develop and evaluate forecasting models. It can be installed as a plugin to the WEKA GUI. This time series framework first transforms the data into a form, that can be processed by a standard propositional learning algorithm. It removes temporal ordering by encoding the time dependency as additional input fields. These fields are called \texttt{lagged variables}. After the transformation, any of WEKA's regression algorithms can be applied to learn a model. This approach is often more powerful than classical statistical techniques. An example of the time series plugin in WEKA GUI can be found in Figure~\ref{WEKAgui}. This library was chosen as the best available and will be used in the implementation.
 
 \begin{figure*}[htb]
   \centering
@@ -635,7 +635,7 @@ This tool\footnote{\url{https://github.com/EdwardRaff/JSAT}} has one of the larg
 
 \chapter{Design of the application}\label{chpt5}
 
-This chapter contains the proposed design of the web application for Fantasy football performance prediction. In the first section, there is a list of requirements for the application. These requirements were created based on findings from existing prediction applications in Chapter \ref{chpt2}. Next, there are designs for application architecture, data fetching flow, and graphical user interface.
+This chapter contains the proposed design of the web application for Fantasy football performance prediction. In the first section, there is a list of requirements for the application. These requirements were created based on findings from existing prediction applications in Chapter~\ref{chpt2}. Next, there are designs for application architecture, data fetching flow, and graphical user interface.
 
 \section{Requirements for prediction application}
 
@@ -668,7 +668,7 @@ These are the minimal high-level requirements for the application. Based on thes
 
 \section{System architecture design}
 
-The architecture of the application will have the following 3 main parts: server, client and a data fetching scripts. The architecture is illustrated in Figure \ref{architecture}.
+The architecture of the application will have the following 3 main parts: server, client and a data fetching scripts. The architecture is illustrated in Figure~\ref{architecture}.
 
 \begin{figure*}[!htb]
   \centering
@@ -687,7 +687,7 @@ The architecture of the application will have the following 3 main parts: server
 \section{Data fetching and processing flow}\label{df}
 
 All the data used in this thesis are collected from two resources. The new data are fetched from the official FPL API\footnote{\url{https://fantasy.premierleague.com/api/bootstrap-static/}}
-by a custom script. This script then formats and filters the data and stores them in a player data file system on the server. From this API the script can get all of the data for the current game week, and also statistical data about teams and players from the current season. The problem with this resource is, that the data are erased before every season. However, there is a project on Github\footnote{\url{https://github.com/vaastav/Fantasy-Premier-League}} dedicated to collecting historical data from this API, which is the second data resource used. This project also provides scripts for scraping data from API in Python. The script in this thesis is inspired by them. The flow of the data fetching part of the application can be found in Figure \ref{datafetching}. This data fetching script will be used in the future for getting more data. In this project, it will be just implemented and not used, and it will be enabled before the start of the new season. For this thesis, historical data from the mentioned Github project are enough.
+by a custom script. This script then formats and filters the data and stores them in a player data file system on the server. From this API the script can get all of the data for the current game week, and also statistical data about teams and players from the current season. The problem with this resource is, that the data are erased before every season. However, there is a project on Github\footnote{\url{https://github.com/vaastav/Fantasy-Premier-League}} dedicated to collecting historical data from this API, which is the second data resource used. This project also provides scripts for scraping data from API in Python. The script in this thesis is inspired by them. The flow of the data fetching part of the application can be found in Figure~\ref{datafetching}. This data fetching script will be used in the future for getting more data. In this project, it will be just implemented and not used, and it will be enabled before the start of the new season. For this thesis, historical data from the mentioned Github project are enough.
 
 \begin{figure*}[!htb]
   \centering
@@ -735,7 +735,7 @@ Lastly, this API has one downside, it does not contain teams that were relegated
 
 In this section, there are designs of all the main screens in the web application. Designs generally show the most important functionality and layout on the respective pages, they do not show all of the control and UX elements on the pages. 
 
-In Figure \ref{gui1} there is a mockup design for a main dashboard screen. In Figure \ref{gui2} there is an ``Edit Squad'' screen with transfer market and squad view for user to edit. In Figure \ref{gui3} there are designs for two overlays. The overlays are for optimizations options and for actions on squad screen. In Figure \ref{gui4} there is a ``Squad Optimization Overview'' screen. It shows the recommended team selection and some other options for maximizing the points. In the Figure \ref{gui5} there is a design for a ``Statistical Overview'' screen, with tables for various player statistics.
+In Figure~\ref{gui1} there is a mockup design for a main dashboard screen. In Figure~\ref{gui2} there is an ``Edit Squad'' screen with transfer market and squad view for user to edit. In Figure~\ref{gui3} there are designs for two overlays. The overlays are for optimizations options and for actions on squad screen. In Figure~\ref{gui4} there is a ``Squad Optimization Overview'' screen. It shows the recommended team selection and some other options for maximizing the points. In the Figure~\ref{gui5} there is a design for a ``Statistical Overview'' screen, with tables for various player statistics.
 
 These designs are not final, and they can be changed during implementation, when the more obvious and user-friendly design is created. These designs provide all of the functionality that is needed to successfully fulfill the requirements.
 
@@ -784,7 +784,7 @@ The application server was created using Spring Boot\footnote{\url{https://sprin
 This server contains REST API that is used by the web application to fetch the data. It also contains services to manipulate dataset, create, and use the prediction model and output data.
 
 \subsection*{Server architecture}
-The server is using hybrid architecture, where there is no presentation and no database layer. The presentation is handled by the web application, which is described in Section \ref{FE}. It is configured to run only locally, on the same IP address as the web application. There is also no database, as the authentication runs against the FPL API and there is no need to store any user's information. Also, the player data do not need to be stored in the database, the files in the server filesystem are enough. The server consists mainly of 3 parts: 
+The server is using hybrid architecture, where there is no presentation and no database layer. The presentation is handled by the web application, which is described in Section~\ref{FE}. It is configured to run only locally, on the same IP address as the web application. There is also no database, as the authentication runs against the FPL API and there is no need to store any user's information. Also, the player data do not need to be stored in the database, the files in the server filesystem are enough. The server consists mainly of 3 parts: 
 
 \begin{itemize}
     \item Controller part: it contains all available API endpoints, that can be used. There are endpoints for loading player and team data, fetching predictions and optimizing user's squad, for logging and authenticating users, and some administrative endpoints for the server administrator to manipulate dataset.
@@ -792,7 +792,7 @@ The server is using hybrid architecture, where there is no presentation and no d
     \item Data part: the application server contains the dataset and the scripts for downloading newer data. Also, predictions and player statistics are stored on the filesystem.
 \end{itemize}
 
-The detailed tables of all endpoints used in the application server can be found in Tables \ref{appServer:table1}, \ref{appServer:table2}, \ref{appServer:table3} and \ref{appServer:table4}. The server was designed to react to the changes of the dataset, that will happen after every game week. When every round is finished and new data are downloaded to the server, there are API endpoints available for the administrator, to regenerate the datasets used in the prediction models, and to create new predictions based on updated data. These changes can happen without the need to reload the server. The other option would be to create cron jobs to regenerate dataset, but they are unreliable in the changing world of English Premier League, where many fixtures are postponed and canceled often.
+The detailed tables of all endpoints used in the application server can be found in Tables~\ref{appServer:table1},~\ref{appServer:table2},~\ref{appServer:table3} and~\ref{appServer:table4}. The server was designed to react to the changes of the dataset, that will happen after every game week. When every round is finished and new data are downloaded to the server, there are API endpoints available for the administrator, to regenerate the datasets used in the prediction models, and to create new predictions based on updated data. These changes can happen without the need to reload the server. The other option would be to create cron jobs to regenerate dataset, but they are unreliable in the changing world of English Premier League, where many fixtures are postponed and canceled often.
 
 \begin{table}[!htb]
     \centering
@@ -865,7 +865,7 @@ When the first endpoint returns an error, the authentication failed and user is 
 
 \subsection*{Optimizing the squad}
 
-In Section \ref{FE}, that describes the webserver, I mention the option to optimize the squad using various parameters. This option is implemented as a service on the application server. It receives all parameters provided by the user and then proceeds to optimize his squad.
+In Section~\ref{FE}, that describes the webserver, I mention the option to optimize the squad using various parameters. This option is implemented as a service on the application server. It receives all parameters provided by the user and then proceeds to optimize his squad.
 This is the process of optimization:
 
 \begin{itemize}
@@ -901,7 +901,7 @@ The algorithm works like this:
 \end{itemize}
 
 \section{Data preparation}
-Creating the dataset for this thesis consists of two parts. The first part is obtaining player data from the FPL API. This was mainly covered in section \ref{df} in the previous chapter. In section \ref{dataset-first} there will be more information about the scripts downloading the data are functioning and what are their outputs. The second part of dataset preparation is dividing and filtering the downloaded data to form that can be used by a prediction model. This is covered in section \ref{dataset-second}. When these two steps are completed, the dataset is prepared to be used by both the Web application, to read data about the players, and by prediction model to read historical statistics and player attributes.
+Creating the dataset for this thesis consists of two parts. The first part is obtaining player data from the FPL API. This was mainly covered in section~\ref{df} in the previous chapter. In section~\ref{dataset-first} there will be more information about the scripts downloading the data are functioning and what are their outputs. The second part of dataset preparation is dividing and filtering the downloaded data to form that can be used by a prediction model. This is covered in section~\ref{dataset-second}. When these two steps are completed, the dataset is prepared to be used by both the Web application, to read data about the players, and by prediction model to read historical statistics and player attributes.
 
 \section{Downloading and extraction}\label{dataset-first}
 
@@ -932,12 +932,12 @@ This is the description of the process of reading the prepared dataset and selec
 This process creates training and testing sets for every player in the dataset. These sets will then be used by a prediction model to predict future player data. It is worth noting, that after each round is finished, the dataset needs to be recreated, because one more data record should be available for every player, and the prediction model needs to be readjusted for the next round.
 
 \section{Forecaster and statistical models}\label{forecaster}
-The player performance forecaster also runs on the application server mentioned in Section \ref{BE} above. It is part of the WEKA\footnote{\url{https://www.cs.waikato.ac.nz/ml/weka/}} library. For making predictions, I used class \texttt{WekaForecaster} from its time series package.
+The player performance forecaster also runs on the application server mentioned in Section~\ref{BE} above. It is part of the WEKA\footnote{\url{https://www.cs.waikato.ac.nz/ml/weka/}} library. For making predictions, I used class \texttt{WekaForecaster} from its time series package.
 The forecasting works like this:
 
 \begin{enumerate}
     \item The script iterates over the \texttt{/dataset/players} folder, which contains historical player data divided into training and testing sets. For every player, it loads .arff file with his training set. The sizes of the sets vary over every round, but here is the estimate: all past player data until 8 game weeks before current round = training set, 8 past game weeks = testing set. The size of the training set gets bigger, as the player plays more games in the league. For new players in the league, the training set is non-existent, and predicted points are very random. 
-    \item The script then removes the first two lines in the \texttt{.arff} data part. Those lines are same for every player, and they are there to generalize \texttt{.arff} file generation in the dataset creation part. They need to be removed before making predictions. Those lines provide value 0 for every number parameter, and boolean values True, False so the \texttt{.arff} file gets properly autogenerated. They are shown in Listing \ref{arffexample}.
+    \item The script then removes the first two lines in the \texttt{.arff} data part. Those lines are same for every player, and they are there to generalize \texttt{.arff} file generation in the dataset creation part. They need to be removed before making predictions. Those lines provide value 0 for every number parameter, and boolean values True, False so the \texttt{.arff} file gets properly autogenerated. They are shown in Listing~\ref{arffexample}.
         \begin{lstlisting}[label=arffexample, caption=These 2 lines are put in every .arff file to allow correct autogeneration.]
             0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0
             0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,True,0
@@ -947,10 +947,10 @@ The forecasting works like this:
     
     \begin{itemize}
         \item fields to forecast: only the total points predicted are forecasted,
-        \item forecaster: the neural network, which is called \texttt{Multilayer Perceptron} in WEKA,
         \item time stamp: the game week number is used as a time variable, it increases for every round,
         \item lag variables: values between 1 and 8, with flag to adjust for trends set to true,
-        \item overlay fields: opponent team and expected minutes played are known beforehand, so these were selected.
+        \item overlay fields: opponent team and expected minutes played are known beforehand, so these were selected,
+        \item forecaster: the neural network, called \texttt{Multilayer Perceptron} in WEKA. A~multilayer perceptron is a network of perceptrons, linear classifiers. This network consists of the input layer, where there is one input for every attribute, and the output layer, one output for every class. Besides that, it contains hidden layers. The number of hidden layers depends on the problem, that the neural network is solving. In WEKA, it is the mean value of the number of input and output layers. The multilayer perceptron is considered to be quite effective, but a slow algorithm.
     \end{itemize}
     
     The final parameters and model attributes were selected after testing multiple variants, and the variant with the best results was picked in the end. Then the forecaster is built with the training data, and primed with the validation data. After these steps, the predictions are created.
@@ -968,7 +968,7 @@ Here is a list of features that are used for the prediction in the final impleme
 
 Most of the model development and optimizing was done in WEKA GUI, only then after all errors and deviations were eliminated and the model accuracy was high enough, I implemented it in Java code. The WEKA GUI allows to tinker with all the parameters of the model and to see the results immediately. After every iteration, it shows how well the model is performing and I could see, if the changes in parameters I made improved the model.
 
-Besides the \texttt{WekaForecaster} model for prediction, that was tinkered with a lot and tested with various players in WEKA GUI, and with this Java API, there is one more model implemented, that does not use machine learning to predict future points. It uses pure arithmetics and counts predicted points directly from points in past rounds. This was created to further compare gained results in Experiments Chapter \ref{chpt7}. The algorithm was inspired by a paper \cite{gupta2019time} about time series modeling, where it was used to evaluate players while building a dream team. 
+Besides the \texttt{WekaForecaster} model for prediction, that was tinkered with a lot and tested with various players in WEKA GUI, and with this Java API, there is one more model implemented, that does not use machine learning to predict future points. It uses pure arithmetics and counts predicted points directly from points in past rounds. This was created to further compare gained results in Experiments Chapter~\ref{chpt7}. The algorithm was inspired by a paper~\cite{gupta2019time} about time series modeling, where it was used to evaluate players while building a dream team. 
 This model works like this:
 
 \begin{enumerate}
@@ -991,15 +991,15 @@ This model works like this:
     \item Now the CPP and PPM need to be normalized to range [0-1]. This is because they need to be then added together, by giving equal weight to each and then all of the players are evaluated equally. The weights can be adjusted if the 50/50 approach is not optimal. This sum is called Cost-point index (CPI) and it can identify high performers and cheaper players worth a lot of points. It is calculated using following functions:
     
     \begin{align}
-        \textnormal{normalizedCPP} &= \textnormal{(CPP - minCPP) / (maxCPP - minCPP)}\\
-        \textnormal{normalizedPPM} &= \textnormal{(PPM - minPPM) / (maxPPM - minPPM)}\\
+        \textnormal{normalizedCPP} &= \frac{\textnormal{CPP - minCPP}}{\textnormal{maxCPP - minCPP}}\\[7pt]
+        \textnormal{normalizedPPM} &= \frac{\textnormal{PPM - minPPM}}{\textnormal{maxPPM - minPPM}}\\[7pt]
         \textnormal{cpi} &= \textnormal{Math.round(normalizedCPP + normalizedPPM)}
     \end{align}
     where minCPP and maxCPP, are minimal and maximal values of CPP across all players, similarly for minPPM and maxPPM. With every player now evaluated using CPI, the optimization algorithm can choose the best options for the squad even using this method. All these processes are repeated for the second version of the algorithm, using just the last 6 records.
     
-    
 \end{enumerate}
 
+\newpage
 \section{Webserver}\label{FE}
 The second part of the application is the webserver. It is the part visible to the user. The technologies used for building the web application are React\footnote{\url{https://reactjs.org/}} Javascript library, which is currently one of the most popular tools available and Bootstrap\footnote{\url{https://react-bootstrap.github.io/}} for building components. For CSS stylesheets, I used Sass\footnote{\url{https://sass-lang.com/}}.
 For code quality, I used Prettier\footnote{\url{https://prettier.io/}} and other libraries were used as well, for example, loading, pagination, slider, and more.
@@ -1014,8 +1014,8 @@ There is no web browser's local storage used, which means that the data is lost 
 The data is only reloaded after logging out of the application.
 
 \subsection*{Authentication}
-User does not need to authenticate to use this application, it works without logging in as well. But he has this option, and it has its benefits. If he chooses so, he must enter the same credentials that he uses for the FPL App. The credentials are then used to load his squad from the FPL servers. This process was further described in Section \ref{BE}, in the Authentication part.
-If the user does not want to enter his credentials, he can still open the app, but he has to input his team manually by choosing players from the transfer market. This way is a little inaccurate, because the costs of the players may be different than at the time he bought them originally. But some users don't want to use their credentials on third-party websites, so this is why this option is provided. In Figure, \ref{logged} there are two possible screens that the user can get, first one is with his loaded team from the FPL, the second one is empty because he wants to input the team manually.
+User does not need to authenticate to use this application, it works without logging in as well. But he has this option, and it has its benefits. If he chooses so, he must enter the same credentials that he uses for the FPL App. The credentials are then used to load his squad from the FPL servers. This process was further described in Section~\ref{BE}, in the Authentication part.
+If the user does not want to enter his credentials, he can still open the app, but he has to input his team manually by choosing players from the transfer market. This way is a little inaccurate, because the costs of the players may be different than at the time he bought them originally. But some users don't want to use their credentials on third-party websites, so this is why this option is provided. In Figure,~\ref{logged} there are two possible screens that the user can get, first one is with his loaded team from the FPL, the second one is empty because he wants to input the team manually.
 
 \begin{figure*}[!htb]
   \centering
@@ -1026,7 +1026,7 @@ If the user does not want to enter his credentials, he can still open the app, b
 \end{figure*}
 
 \subsection*{Changing the team manually}
-The first option available to the user is the option to change his team manually, by checking the transfer market. The user has options to replace any member of his squad for players in the transfer market, as long as the rules of the FPL are still unbroken. More on the rules can be found in Section \ref{dynamics}. The transfer market has options to filter players by position and club and to sort them by various parameters. The transfer market is shown in Figure \ref{market}. There is also a screen, where the user can see how the algorithm predicts his players to play in the next round. He can use this information to navigate the transfer market, and it can help him choose, which player to replace. When the user makes a change, the predictions are reloaded based on his current selected squad. These screens can be found in Figure \ref{perf}. The user also has the option to browse prediction for all available players. All of these options are shown in one single dashboard, which makes then easily accessible and the user can use them all at once.
+The first option available to the user is the option to change his team manually, by checking the transfer market. The user has options to replace any member of his squad for players in the transfer market, as long as the rules of the FPL are still unbroken. More on the rules can be found in Section~\ref{dynamics}. The transfer market has options to filter players by position and club and to sort them by various parameters. The transfer market is shown in Figure~\ref{market}. There is also a screen, where the user can see how the algorithm predicts his players to play in the next round. He can use this information to navigate the transfer market, and it can help him choose, which player to replace. When the user makes a change, the predictions are reloaded based on his current selected squad. These screens can be found in Figure~\ref{perf}. The user also has the option to browse prediction for all available players. All of these options are shown in one single dashboard, which makes then easily accessible and the user can use them all at once.
 
 \begin{figure*}[!htb]
   \centering
@@ -1043,7 +1043,7 @@ The first option available to the user is the option to change his team manually
 \end{figure*}
 
 Every player has his player detail card, where there are options to remove him from the squad, to substitute him for a player on the bench, to select a player as a captain or a~vice-captain. If the user is interested in past statistics of a player, there is also the option to see those on the player detail card. The card can also show his current injury or suspension status.
-These options are shown in Figure \ref{detail}. There is also an option to reset squad to its original form in the ``Team Overview'' screen.
+These options are shown in Figure~\ref{detail}. There is also an option to reset squad to its original form in the ``Team Overview'' screen.
 
 \begin{figure*}[!htb]
   \centering
@@ -1054,7 +1054,7 @@ These options are shown in Figure \ref{detail}. There is also an option to reset
 \end{figure*}
 
 \subsection*{Automatic optimization}
-This is the main feature of this web application, it is an option to call the created prediction model in the application server and make it automatically optimize the user's squad. There are multiple optimization options, that are also shown in Figure \ref{optimizationOptions}. The options provided are explained here:
+This is the main feature of this web application, it is an option to call the created prediction model in the application server and make it automatically optimize the user's squad. There are multiple optimization options, that are also shown in Figure~\ref{optimizationOptions}. The options provided are explained here:
 
 \begin{itemize}
     \item Number of transfers: every week, just one transfer is allowed in general. But in some cases, when there is no transfer in the previous week, the transfer chip is moved to the next round. That's why there are three options: 0, 1, and 2 transfers.
@@ -1063,7 +1063,7 @@ This is the main feature of this web application, it is an option to call the cr
     \item Tips count: this is just an option for users to select, how many different tips he wants to get, so he can choose in the end, what changes he likes the most.
 \end{itemize}
 
-When the prediction model finishes the computations and optimizations, the final results are fetched from the server and displayed to the user. Then he has the option to apply the changes or select another option. Then the changes are applied and he can see his new team on the ``Team Overview'' screen and adjust it more if he wants. The results are displayed in Figure \ref{results}.
+When the prediction model finishes the computations and optimizations, the final results are fetched from the server and displayed to the user. Then he has the option to apply the changes or select another option. Then the changes are applied and he can see his new team on the ``Team Overview'' screen and adjust it more if he wants. The results are displayed in Figure~\ref{results}.
 
 \begin{figure*}[!htb]
   \centering
@@ -1080,7 +1080,7 @@ When the prediction model finishes the computations and optimizations, the final
 \end{figure*}
 
 \subsection*{Player statistics}
-The last part of the website are the player statistics. Users can browse through statistics from past seasons with sorting and filtering options. He can also see, which players are currently injured, suspended, or unavailable for selection. This information can help users decide on team changes. They are shown in Figures \ref{stats} and \ref{injuries}.
+The last part of the website are the player statistics. Users can browse through statistics from past seasons with sorting and filtering options. He can also see, which players are currently injured, suspended, or unavailable for selection. This information can help users decide on team changes. They are shown in Figures~\ref{stats} and~\ref{injuries}.
 
 \begin{figure*}[!htb]
   \centering
@@ -1120,8 +1120,8 @@ Similarly to the MAE, it is used to measure the difference between true and pred
 where $n$ is the number of instances in the testing set, $y_i$ is the true value, and $\lambda(x_i)$ is the predicted value.
 
 
-The selected attributes and features are further explained in Section \ref{forecaster}.
-In Figure \ref{eval}, there is an example of the output of the WEKA GUI, that was used to compare different combinations of attributes. For every calculation, the graphical representation of the errors was displayed, as shown in Figure \ref{eval2}. Players had a different number of training and testing instances available, due to some of them have been playing in the league just for a couple of matches, which was a problem. This meant that the MAE and RMSE errors were very different for various groups of players.
+The selected attributes and features are further explained in Section~\ref{forecaster}.
+In Figure~\ref{eval}, there is an example of the output of the WEKA GUI, that was used to compare different combinations of attributes. For every calculation, the graphical representation of the errors was displayed, as shown in Figure~\ref{eval2}. Players had a different number of training and testing instances available, due to some of them have been playing in the league just for a couple of matches, which was a problem. This meant that the MAE and RMSE errors were very different for various groups of players.
 
 \begin{figure*}[!htb]
   \centering
@@ -1148,14 +1148,15 @@ This part of the testing was done during the whole implementation of the web app
     \item Different combinations of selected players.
 \end{itemize}
 
-The biggest issues encountered during the web application testing were the edge cases within the data. For example, if the user had no data available to show in the tables if he had already the best possible team and there was nothing to optimize. All of the use cases tested are further explained in Section \ref{FE}.
+The biggest issues encountered during the web application testing were the edge cases within the data. For example, if the user had no data available to show in the tables if he had already the best possible team and there was nothing to optimize. All of the use cases tested are further explained in Section~\ref{FE}. The testing was done only by me, no other people were involved. The application is not yet deployed anywhere online.
 
 \section{Prediction accuracy testing} \label{pred}
-This section focuses on showing the results provided by the prediction model. Since the dataset generates a lot of time-series data, the process of predicting results and comparing them to the true values needed to be automated. I chose a few random players and simulated a few Game weeks with them, and compared their predicted points with the true ones, to showcase prediction accuracy. Moreover, I created a service that gets the current user's team in the Game week 10 and simulates the season for 10 weeks and then provides the predicted and real values for points obtained for every player. This process is very time and resource-demanding. Generating the predictions and simulating the squad optimizing just for the 10 weeks takes up to 7 hours of processing time. That means, that not a lot of experiments of this size could be done, and that's why I abandoned the idea to simulate the whole season. In the next two sections, there will be more information about these experiments.
+This section focuses on showing the results provided by the prediction model. I needed to experiment with the accuracy of the prediction model, to determine, if it does not show any deviations for some groups of players. The model needs to be fair and cannot provide better or worse prediction for any group of players. Otherwise, it will be biased and provide incorrect results.
+
+Since the dataset generates a lot of time-series data, the process of predicting results and comparing them to the true values needed to be automated. I chose a few random players and simulated a few Game weeks with them, and compared their predicted points with the true ones, to showcase prediction accuracy. Moreover, I created a service that gets the current user's team in the Game week 10 and simulates the season for 10 weeks and then provides the predicted and real values for points obtained for every player. This process is very time and resource-demanding. Generating the predictions and simulating the squad optimizing just for the 10 weeks takes up to 7 hours of processing time. That means, that not a lot of experiments of this size could be done, and that's why I abandoned the idea to simulate the whole season. In the next two sections, there will be more information about these experiments.
 
 \subsection*{Predicted values comparison experiment}
-In this section, the process of comparing the predicted values with real data for 24 selected players is described. This comparison is needed to see, if the predicted values get close to the real ones, and how close the model is for different groups of players.
-I selected 3 groups of players, in every group, there are 2 players for each of the 4 positions on the pitch.
+In this section, the process of comparing the predicted values with real data for 24 selected players is described. This comparison is needed to see, if the predicted values get close to the real ones, and how close the model is for different groups of players. The experiment was designed to show, if the model provides predictions with similar error rates for different groups of players. I selected 3 groups of players, in every group, there are 2 players for each of the 4 positions on the pitch.
 
 \begin{itemize}
     \item Group 1: Players with generally higher scores that are playing in the league for more than 1 season. Here the selected players were: Goalkeepers: K.Schmeichel, Alisson; Defenders: V.van Dijk, C.Soyuncu; Midfielders: K.de Bruyne, Richarlison; Forwards: J.Vardy, P.E.Aubameyang.
@@ -1165,9 +1166,9 @@ I selected 3 groups of players, in every group, there are 2 players for each of 
 
 I ran the simulations from 10th until the 28th round, as this was the last round with all the completed fixtures before the Premier League was suspended. I started deliberately in the 10th round, because I wanted the players in Group 3 to have at least some past data, for the training set. 
 
-In Table \ref{exp-tab-1}, there is a comparison between average MAE and RMSE over all 19 rounds in this experiment for each of the 3 groups. Unsurprisingly, the model shows better results with players that get lower points consistently (Group 2). These players don't very often get points bigger than 8/9 in a round, more often they get points closer to zero. That's why the model has a lower error rate with these players.
+In Table~\ref{exp-tab-1}, there is a comparison between average MAE and RMSE over all 19 rounds in this experiment for each of the 3 groups. Unsurprisingly, the model shows better results with players that get lower points consistently (Group 2). These players don't very often get points bigger than 8/9 in a round, more often they get points closer to zero. That's why the model has a lower error rate with these players.
 For Group 1, the error rate is higher. The reason for that is, that these players often have game rounds, where they get much higher points than the round before, and the round after that they get average points again. The model, predicts those higher valued weeks well, but the difference between obtained points is higher too, so the error rate increases.
-In Figure \ref{exp-img-1} there is an example graph of 3 players, one from each group, with differences between the true and predicted values for multiple rounds.
+In Figure~\ref{exp-img-1} there is an example graph of 3 players, one from each group, with differences between the true and predicted values for multiple rounds.
 
 \begin{table}[!htb]
     \centering
@@ -1181,7 +1182,7 @@ In Figure \ref{exp-img-1} there is an example graph of 3 players, one from each 
     \end{tabular}
 \end{table}
 
-There was no evidence, that the models perform much worse with players in Group 3, which has fewer available training data. This can mean, that the player form from the past does not have such a great impact on his score. There was also no evidence, that the model performs predictions with different accuracy for the 4 player positions, the error rate is very similar to all 4 of them. The data shows, that if the player has a great game, the model does not automatically start to predict much higher scores for him, but adjusts the predictions more sensibly. This can be seen in Table \ref{exp-tab-2}.
+There was no evidence, that the models perform much worse with players in Group 3, which has fewer available training data. This can mean, that the player form from the past does not have such a great impact on his score. There was also no evidence, that the model performs predictions with different accuracy for the 4 player positions, the error rate is very similar to all 4 of them. The data shows, that if the player has a great game, the model does not automatically start to predict much higher scores for him, but adjusts the predictions more sensibly. This can be seen in Table~\ref{exp-tab-2}.
 
 \begin{table}[!htb]
     \centering
@@ -1199,16 +1200,12 @@ There was no evidence, that the models perform much worse with players in Group 
 \begin{figure*}[!htb]
   \centering
   \includegraphics[width=1.0\linewidth]{obrazky-figures/exp1.PNG}
-  \caption{Comparison in predicted and true point values for 3 selected players from each group. Generally, the predicted points are lower than the true ones. The model shows a~higher error rate with players that have a great match once in a while, with much higher scored points than the matches before.}
+  \caption{Comparison in predicted and true point values for 3 selected players from each group. Generally, the predicted points are lower than the true ones. The model shows a~higher error rate with players that have a great match once in a while, with much higher scored points than the matches before. Horizontal axis is showing the game week number, vertical axis shows the predicted number of points.}
   \label{exp-img-1}
 \end{figure*}
 
 \subsection*{Optimized team improvement experiment}
-This experiment was designed to see, if using the implemented predictor for 10 weeks and strictly adhere to its predictions and tips would improve the user's total obtained points in the FPL game. The experiment starts in week 9 because I wanted the players that are new in the league, to have at least some training data. I used my team, and then the team of the current highest-ranked player in the FPL, to compare the impact of the predictor on mediocre and superb teams. For Game week 9, I used the squad, that both of our teams had in Game week 9 in reality. Then I simulated creating predictions, retrained model, and optimizing the squads for 10 weeks. I used 3 selection techniques for each round to see, which one would be the most effective. Also, I used 3 different configurations of using transfers. In the first one, I used 1 transfer token every week. The second and third combinations used 2 tokens one week and 0 the next one, with alternating weeks in each combination. That meant that for every squad, I got 9 different new teams after every round. The results of the experiment can be seen in Figure \ref{exp-img-2} for my team, which is mediocre and gets average points every week, and in Figure \ref{exp-img-3}, for the current number 1 team in the leaderboard, which gets the highest scores almost every week.
-
-For my squad, it can be seen, that the optimized squad does not get higher points than the real one every week for any of the combinations. But for every week, at least one combination gets higher or equal points. That leads to a conclusion, that no single method improves the results every week. This means, that for a mediocre squad like mine, the best solution for optimizing the squad is to get predictions for multiple parameter combinations, and then select the best ones for me. In the next section, I will discuss possible improvements to the prediction models, that can improve one of the selection techniques, and allow better results.
-
-However, for the highest-ranked squad, almost none of the combinations provided better results. This means that the squad is already highly optimized and forcing transfers on it only decreased the total obtained points.
+This experiment was designed to see, if using the implemented predictor for 10 weeks and strictly adhere to its predictions and tips would improve the user's total obtained points in the FPL game. The experiment starts in week 9 because I wanted the players that are new in the league, to have at least some training data. I used my team, and then the team of the current highest-ranked player in the FPL, to compare the impact of the predictor on mediocre and superb teams. For Game week 9, I used the squad, that both of our teams had in Game week 9 in reality. Then I simulated creating predictions, retrained model, and optimizing the squads for 10 weeks. I used 3 selection techniques for each round to see, which one would be the most effective. Also, I used 3 different configurations of using transfers. In the first one, I used 1 transfer token every week. The second and third combinations used 2 tokens one week and 0 the next one, with alternating weeks in each combination. That meant that for every squad, I got 9 different new teams after every round. The results of the experiment can be seen in Figure~\ref{exp-img-2} for my team, which is mediocre and gets average points every week, and in Figure~\ref{exp-img-3}, for the current number 1 team in the leaderboard, which gets the highest scores almost every week.
 
 \begin{figure*}[!htb]
   \centering
@@ -1224,7 +1221,12 @@ However, for the highest-ranked squad, almost none of the combinations provided 
   \label{exp-img-3}
 \end{figure*}
 
-As a part of this experiment, there was one more calculation created. If for every round in the experiment, I selected the best team, that the application predicted for me, the total improvement would be significant. The predicted ranking and percentil of players, that are better than me is shown in Table \ref{percentil}. It is worth noting, that I started playing in round 7 this season, so my ranking is very low due to scoring 0 points in first 6 rounds. My average position for rounds 7-29 is 3 556 474, so the overall position would be improved more, if I started playing at the start of the season.
+For my squad, it can be seen, that the optimized squad does not get higher points than the real one every week for any of the combinations. But for every week, at least one combination gets higher or equal points. That leads to a conclusion, that no single method improves the results every week. This means, that for a mediocre squad like mine, the best solution for optimizing the squad is to get predictions for multiple parameter combinations, and then select the best ones for me. In the next section, I will discuss possible improvements to the prediction models, that can improve one of the selection techniques, and allow better results.
+
+However, for the highest-ranked squad, almost none of the combinations provided better results. This means that the squad is already highly optimized and forcing transfers on it only decreased the total obtained points. This can mean, that the highest ranked player is already using some sort of prediction model to help him optimize his squad.
+
+
+As a part of this experiment, there was one more calculation created. If for every round in the experiment, I selected the best team, that the application predicted for me, the total improvement would be significant. The predicted ranking and percentil of players, that are better than me is shown in Table~\ref{percentil}. It is worth noting, that I started playing in round 7 this season, so my ranking is very low due to scoring 0 points in first 6 rounds. My average position for rounds 7-29 is 3 556 474, so the overall position would be improved more, if I started playing at the start of the season.
 
 \begin{table}[!htb]
     \centering
@@ -1247,14 +1249,20 @@ These are the lessons learned from the experiments performed in the previous sec
     \item For users in the higher ranks in the FPL leaderboard, this optimizing algorithm does not provide enough improvement.
 \end{itemize}
 
-\subsection*{Possible improvements}
-There are some things that I was unable to implement in the prediction model, but they can have a bigger impact on the predicted scores.
+\section{Possible improvements}
+There are some things that I was unable to implement in the prediction model, but they can have a bigger impact on the predicted scores. Implementing these changes in the future can have some impact on the model performance and accuracy.
 
-First is the \textbf{fixture difficulty}. Currently, the model knows, who is the opposition team for every fixture, but if it knew about how powerful the opponent was as well, it could improve the performance. However, this data is not available in the dataset and needs to be added from the different data sources. Also, the strength of the teams can change every season.
+\subsection*{Fixture difficulty}
+The first proposed improvement is to take the fixture difficulty into consideration while training and testing the prediction model. Currently, the model knows which team is the opposition for every past and future fixture. If it had information about the difficulty of the fixture, or it knew how powerful is the opponent, the performance of the model could be improved. The power index of each team could be determined beforehand. However, this type of data is not available in the dataset and needs to be added manually from the different data sources. Also, the strength of teams can change every season, and even during the season.
 
-Another useful option to add is to perform \textbf{as many transfers as needed}. When I looked at the top players in the leaderboard, some of them are using 6-10 transfers every week. Those additional transfers are taking points from them, but the additional point value from the newly picked players seems to be higher. This option could improve the results of the optimization more.
+\subsection*{Adding optimization options}
+Another useful option may be to add more options to the optimization algorithm. For example, the option to perform as many transfers as needed while taking the cost of the additional transfers into account, or to change the formation during the optimization could improve the suggestions too. When I looked at the top players in the leaderboard, some of them are using 6-10 transfers every week. Granted, the additional transfers cost them some points, but the new players will score more points and thus make their teams better. This can be a complicated feature to implement, and it may be not used very often, but it can provide some improvement.
 
-More experiments like the one in Section \ref{pred} must be performed to further analyze the impact of the model on different groups of players. The experiment could be expanded to cover players from different clubs, injury-prone, and healthy players, and more.
+\subsection*{More player data}
+The training and testing datasets could be enhanced with data from different sources. These additional data could offer more information about the players, such as expected goals, expected assists and more. There are websites that offer these statistical data, and they could be scraped and the data could be tested with the prediction model. This new information could improve the model accuracy.
+
+
+More experiments like the one in Section~\ref{pred} must be performed to further analyze the impact of the model on different groups of players. The experiment could be expanded to cover players from different clubs, injury-prone, and healthy players, and more.
 
 
 \chapter{Conclusion and future work}\label{chpt8}
