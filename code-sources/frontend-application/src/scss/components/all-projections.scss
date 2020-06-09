@@ -1,5 +1,12 @@
 @import '../atoms/variables';
 
+.all-projections-container {
+  @media screen and (max-width: $screen-md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .all-projections {
   .table {
     width: 100%;
@@ -44,6 +51,10 @@
   form {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
   }
 }
 

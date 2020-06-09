@@ -77,8 +77,8 @@ const StatisticsTable = () => {
           });
         }
       }
-
-      setFilteredPlayers(tmpFiltered);
+      const sorted = sortPlayers(parseInt(selectedSortBy), tmpFiltered);
+      setFilteredPlayers(sorted);
     }
 
     function compareNames(a, b) {
@@ -95,10 +95,14 @@ const StatisticsTable = () => {
       return comparison;
     }
 
-    function sortPlayers(option) {
+    function sortPlayers(option, players) {
+      let toSort = filteredPlayers;
+      if (players !== undefined) {
+        toSort = players;
+      }
       if (option === 1) {
         // NAME
-        const tmpPlayers = filteredPlayers.map(player => {
+        const tmpPlayers = toSort.map(player => {
           return {
             ...player,
             display_name: playerService.getPlayerName(player) + player.first_name,
@@ -107,7 +111,7 @@ const StatisticsTable = () => {
         return tmpPlayers.sort(compareNames);
       } else if (option === 2) {
         // SELECTED BY
-        const tmpPlayers = filteredPlayers.map(player => {
+        const tmpPlayers = toSort.map(player => {
           return {
             ...player,
           };
@@ -117,7 +121,7 @@ const StatisticsTable = () => {
         });
       } else if (option === 3) {
         // POINTS
-        const tmpPlayers = filteredPlayers.map(player => {
+        const tmpPlayers = toSort.map(player => {
           return {
             ...player,
           };
@@ -127,7 +131,7 @@ const StatisticsTable = () => {
         });
       } else if (option === 4) {
         // BPS
-        const tmpPlayers = filteredPlayers.map(player => {
+        const tmpPlayers = toSort.map(player => {
           return {
             ...player,
           };
@@ -136,7 +140,7 @@ const StatisticsTable = () => {
           return b.bps - a.bps;
         });
       }
-      return combinedPlayers;
+      return toSort;
     }
 
     function changePosition(e) {

@@ -10,7 +10,7 @@ const Statistics = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className='main container'>
+    <div className='main container statistics-container'>
       <div className='row'>
         <div className='col-xl-12 d-flex flex-column'>
           <Card title={intl.messages['menu.playerstats']}>

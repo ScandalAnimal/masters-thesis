@@ -54,14 +54,15 @@ const UnavailablePlayersTable = () => {
       let tmpFiltered;
 
       if (parseInt(v) === 0) {
-        tmpFiltered = filteredPlayers;
+        tmpFiltered = injuries;
       } else {
         const selectedT = teams.filter(team => team.id === parseInt(v));
-        tmpFiltered = filteredPlayers.filter(item => {
+        tmpFiltered = injuries.filter(item => {
           return parseInt(item.team_code) === parseInt(selectedT[0].code);
         });
       }
-      filterPlayerAction(tmpFiltered);
+      const sorted = sortPlayers(parseInt(selectedSortBy), tmpFiltered);
+      filterPlayerAction(sorted);
     }
 
     function compareNames(a, b) {
@@ -78,10 +79,14 @@ const UnavailablePlayersTable = () => {
       return comparison;
     }
 
-    function sortPlayers(option) {
+    function sortPlayers(option, players) {
+      let toSort = filteredPlayers;
+      if (players !== undefined) {
+        toSort = players;
+      }
       if (option === 1) {
         // NAME
-        const tmpPlayers = filteredPlayers.map(player => {
+        const tmpPlayers = toSort.map(player => {
           return {
             ...player,
             display_name: playerService.getPlayerName(player) + player.first_name,
@@ -90,7 +95,7 @@ const UnavailablePlayersTable = () => {
         return tmpPlayers.sort(compareNames);
       } else if (option === 2) {
         // TEAM
-        const tmpPlayers = filteredPlayers.map(player => {
+        const tmpPlayers = toSort.map(player => {
           return {
             ...player,
           };
@@ -102,7 +107,7 @@ const UnavailablePlayersTable = () => {
         });
       } else if (option === 3) {
         // YELLOW CARDS
-        const tmpPlayers = filteredPlayers.map(player => {
+        const tmpPlayers = toSort.map(player => {
           return {
             ...player,
           };
@@ -112,7 +117,7 @@ const UnavailablePlayersTable = () => {
         });
       } else if (option === 4) {
         // RED CARDS
-        const tmpPlayers = filteredPlayers.map(player => {
+        const tmpPlayers = toSort.map(player => {
           return {
             ...player,
           };
@@ -121,7 +126,7 @@ const UnavailablePlayersTable = () => {
           return b.red_cards - a.red_cards;
         });
       }
-      return injuries;
+      return toSort;
     }
 
     function changeTeam(e) {

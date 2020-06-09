@@ -23,7 +23,60 @@ const TransferMarket = () => {
 
   useEffect(() => {
     setFilteredPlayers(combinedPlayers);
+    reFilterPlayers();
   }, [combinedPlayers]);
+
+  function compareNames(a, b) {
+    // Use toUpperCase() to ignore character casing
+    const nameA = a.display_name.toUpperCase();
+    const nameB = b.display_name.toUpperCase();
+
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
+  function sortPlayers(option, players) {
+    let toSort = filteredPlayers;
+    if (players !== undefined) {
+      toSort = players;
+    }
+    if (option === 1) {
+      // NAME
+      const tmpPlayers = toSort.map(player => {
+        return {
+          ...player,
+          display_name: playerService.getPlayerName(player) + player.first_name,
+        };
+      });
+      return tmpPlayers.sort(compareNames);
+    } else if (option === 2) {
+      // POINTS
+      const tmpPlayers = toSort.map(player => {
+        return {
+          ...player,
+        };
+      });
+      return tmpPlayers.sort((a, b) => {
+        return b.total_points - a.total_points;
+      });
+    } else if (option === 3) {
+      // PRICE
+      const tmpPlayers = toSort.map(player => {
+        return {
+          ...player,
+        };
+      });
+      return tmpPlayers.sort((a, b) => {
+        return b.now_cost - a.now_cost;
+      });
+    }
+    return toSort;
+  }
 
   function renderSelectBoxes() {
     const positions = [
@@ -76,55 +129,8 @@ const TransferMarket = () => {
         }
       }
 
-      setFilteredPlayers(tmpFiltered);
-    }
-
-    function compareNames(a, b) {
-      // Use toUpperCase() to ignore character casing
-      const nameA = a.display_name.toUpperCase();
-      const nameB = b.display_name.toUpperCase();
-
-      let comparison = 0;
-      if (nameA > nameB) {
-        comparison = 1;
-      } else if (nameA < nameB) {
-        comparison = -1;
-      }
-      return comparison;
-    }
-
-    function sortPlayers(option) {
-      if (option === 1) {
-        // NAME
-        const tmpPlayers = filteredPlayers.map(player => {
-          return {
-            ...player,
-            display_name: playerService.getPlayerName(player) + player.first_name,
-          };
-        });
-        return tmpPlayers.sort(compareNames);
-      } else if (option === 2) {
-        // POINTS
-        const tmpPlayers = filteredPlayers.map(player => {
-          return {
-            ...player,
-          };
-        });
-        return tmpPlayers.sort((a, b) => {
-          return b.total_points - a.total_points;
-        });
-      } else if (option === 3) {
-        // PRICE
-        const tmpPlayers = filteredPlayers.map(player => {
-          return {
-            ...player,
-          };
-        });
-        return tmpPlayers.sort((a, b) => {
-          return b.now_cost - a.now_cost;
-        });
-      }
-      return combinedPlayers;
+      const sorted = sortPlayers(parseInt(selectedSortBy), tmpFiltered);
+      setFilteredPlayers(sorted);
     }
 
     function changePosition(e) {
@@ -194,6 +200,23 @@ const TransferMarket = () => {
         </Form.Group>
       </Form>
     );
+  }
+
+  function reFilterPlayers() {
+    let tmpFiltered = combinedPlayers;
+
+    if (parseInt(selectedTeam) !== 0) {
+      tmpFiltered = tmpFiltered.filter(item => {
+        return parseInt(item.team) === parseInt(selectedTeam);
+      });
+    }
+    if (parseInt(selectedPosition) !== 0) {
+      tmpFiltered = tmpFiltered.filter(item => {
+        return parseInt(item.element_type) === parseInt(selectedPosition);
+      });
+    }
+    const sorted = sortPlayers(parseInt(selectedSortBy), tmpFiltered);
+    setFilteredPlayers(sorted);
   }
 
   function renderPlayerList() {

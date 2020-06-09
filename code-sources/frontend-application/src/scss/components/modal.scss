@@ -16,6 +16,11 @@
 .player-data-displayed {
   width: 75%;
   max-width: 75%;
+
+  @media screen and (max-width: $screen-md) {
+    width: 96%;
+    max-width: 96%;
+  }
 }
 
 .loader-wrapper {

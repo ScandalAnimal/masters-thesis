@@ -1,5 +1,12 @@
 @import '../atoms/variables';
 
+.statistics-container {
+  @media screen and (max-width: $screen-md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .all-stats {
   .table {
     width: 100%;
@@ -28,6 +35,10 @@
   form {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -37,6 +48,10 @@
   form {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -66,6 +81,11 @@
 
 .unavailable-top {
   display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: $screen-md) {
+    flex-direction: column;
+  }
 }
 
 .unavailable-checkboxes {

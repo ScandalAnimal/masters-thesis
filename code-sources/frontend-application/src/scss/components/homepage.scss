@@ -2,6 +2,10 @@
 
 .homepage {
   //min-height: 100vh;
+  @media screen and (max-width: $screen-md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .login-input {
@@ -24,5 +28,14 @@
 
   button {
     margin-right: 10px;
+  }
+
+  @media screen and (max-width: $screen-lg) {
+    flex-direction: column;
+
+    button {
+      margin-top: 10px;
+      margin-right: 0;
+    }
   }
 }

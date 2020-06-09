@@ -19,10 +19,10 @@ const PlayerRow = ({ player }) => {
   };
   return (
     <div className='player-row row' onClick={openPlayerInfo}>
-      <div className='col-xl-3 text-left'>{name}</div>
-      <div className='col-xl-3 text-center'>{teams[player.team - 1].shortName}</div>
-      <div className='col-xl-3 text-center'>{points}</div>
-      <div className='col-xl-3 text-right'>{(price / 10).toFixed(1)}</div>
+      <div className='col-3 text-left'>{name}</div>
+      <div className='col-3 text-center'>{teams[player.team - 1].shortName}</div>
+      <div className='col-3 text-center'>{points}</div>
+      <div className='col-3 text-right'>{(price / 10).toFixed(1)}</div>
     </div>
   );
 };

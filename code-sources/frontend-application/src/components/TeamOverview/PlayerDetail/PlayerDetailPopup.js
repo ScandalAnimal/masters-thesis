@@ -326,7 +326,7 @@ function PlayerDetailPopup(props) {
                 <div className='row error-message'>{validationMessage}</div>
               )}
               <div className='row spacing' />
-              <div className='row player-detail-popup-button-row'>
+              <div className='row player-detail-popup-button-row show-player-history'>
                 <Button
                   onClick={() => setPlayerDataDisplayed(!playerDataDisplayed)}
                   text={
@@ -336,6 +336,9 @@ function PlayerDetailPopup(props) {
                   }
                   variant='lightPrimary'
                 />
+              </div>
+              <div className='row player-detail-popup-button-row show-player-history-alt'>
+                {intl.messages['detail.more']}
               </div>
             </div>
 

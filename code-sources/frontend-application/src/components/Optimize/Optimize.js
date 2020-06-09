@@ -123,7 +123,7 @@ const Optimize = () => {
   };
 
   return (
-    <div className='main container'>
+    <div className='main container optimize-container'>
       <div className='row'>{isFullSquad() ? renderFullSquad() : renderInfo()}</div>
     </div>
   );

@@ -48,7 +48,7 @@ function Login() {
       <div className='homepage-logo'>
         <img src={plLogo} alt='premier league logo' />
       </div>
-      <div className='login-bottom-section row-cols-2'>
+      <div className='login-bottom-section row-cols-md-2'>
         <div className='login-bottom-col header-link col-md-4'>
           <Form>
             <Form.Group controlId='formEmail' className={'login-input'}>

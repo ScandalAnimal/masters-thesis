@@ -27,6 +27,36 @@ export const appReducer = (state = initialState, action) => {
   let removedPlayersArrayLength = undefined;
   let array = undefined;
   let length = undefined;
+
+  function calculatePosition(currentTeam, newPlayer, origPosition) {
+    const max = [0, 1, 5, 5, 3];
+    const counts = [0, 0, 0, 0, 0];
+    let firstAvailablePosition = 1;
+    let firstAvailableBench = 12;
+
+    for (let i = 0; i < currentTeam.length; i++) {
+      if (currentTeam[i].position <= 11) {
+        firstAvailablePosition = currentTeam[i].position + 1;
+      } else {
+        firstAvailableBench = currentTeam[i].position + 1;
+      }
+      counts[currentTeam[i].element_type] = counts[currentTeam[i].element_type] + 1;
+    }
+
+    if (currentTeam.length === 0) {
+      return origPosition;
+    }
+
+    if (
+      counts[newPlayer.element_type] >= max[newPlayer.element_type] ||
+      firstAvailablePosition === 12
+    ) {
+      return firstAvailableBench;
+    } else {
+      return firstAvailablePosition;
+    }
+  }
+
   switch (action.type) {
     case 'OPEN_MODAL':
       return {
@@ -171,6 +201,9 @@ export const appReducer = (state = initialState, action) => {
           calculatedPosition = i;
           break;
         }
+      }
+      if (state.teamId === 'manual') {
+        calculatedPosition = calculatePosition(array, action.payload.value, calculatedPosition);
       }
       const newPlayer = {
         ...action.payload.value,

@@ -82,6 +82,15 @@ const Header = () => {
               action={closeMobileMenu}
             />
           </div>
+          <div className='col-auto align-items-center'>
+            <TeamId />
+          </div>
+          <div className='col-auto align-items-center'>
+            <ChangeLanguage action={closeMobileMenu} />
+          </div>
+          <div className='col-auto align-items-center'>
+            <Logout action={closeMobileMenu} />
+          </div>
         </div>
       </div>
     </header>

@@ -94,7 +94,11 @@
 
 .login-bottom-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @media screen and (min-width: $screen-sm) {
+    flex-direction: row;
+  }
 }
 
 .login-bottom-col {
@@ -103,6 +107,11 @@
 
 .login-bottom-right {
   padding-left: 50px;
+
+  @media screen and (max-width: $screen-md) {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
 }
 
 .login-bottom-title {

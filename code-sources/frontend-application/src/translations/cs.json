@@ -1,7 +1,7 @@
 {
   "table.name":	"Jméno",
-  "table.gw": "Herní týden",
-  "table.gw.plural": "Herní týdny",
+  "table.gw": "týden",
+  "table.gw.plural": "týdny",
   "table.team":	"Tým",
   "table.points": "Body",
   "table.price": "Cena",
@@ -85,6 +85,7 @@
   "detail.bps": "Bonusové body",
   "detail.no": "Žádná data nejsou dostupná.",
   "detail.all.seasons": "Všechny sezóny",
+  "detail.more": "Historické data hráče jsou k dispozici jenom na desktopu.",
 
   "team.hint": "Tip: Musíte mít vždy alespoň 1 brankáře, 3 obránce, 5 záložníků a 5 útočníků.",
   "team.reset": "Resetovat změny",

@@ -3,12 +3,15 @@ import { useDispatch } from 'react-redux';
 import { useIntl } from 'react-intl';
 import React from 'react';
 
-function Logout() {
+function Logout({ action }) {
   const params = useParams();
   const dispatch = useDispatch();
   const intl = useIntl();
 
   const clear = () => {
+    if (action !== undefined) {
+      action();
+    }
     dispatch({
       type: 'CLEAR',
     });

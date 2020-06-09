@@ -110,7 +110,8 @@ const AllProjectionsTable = () => {
       tmpFiltered.forEach(item => {
         reduced[item[0]] = item[1];
       });
-      setDisplayedProjections(reduced);
+      const sorted = sortPlayers(parseInt(selectedSortBy), reduced);
+      setDisplayedProjections(sorted);
     }
 
     function compareNames(a, b) {
@@ -127,10 +128,14 @@ const AllProjectionsTable = () => {
       return comparison;
     }
 
-    function sortPlayers(option) {
+    function sortPlayers(option, players) {
+      let toSort = displayedProjections;
+      if (players !== undefined) {
+        toSort = players;
+      }
       if (option === 1) {
         // NAME
-        const tmpPlayers = Object.entries(displayedProjections).map(([name, values]) => {
+        const tmpPlayers = Object.entries(toSort).map(([name, values]) => {
           const player = combinedPlayers.find(item => {
             let p = item.first_name + '_' + item.second_name;
             return p === name;
@@ -150,7 +155,7 @@ const AllProjectionsTable = () => {
         return reduced;
       } else if (option === 2) {
         // 1 GW
-        const tmpPlayers = Object.entries(displayedProjections).map(([name, values]) => {
+        const tmpPlayers = Object.entries(toSort).map(([name, values]) => {
           const player = combinedPlayers.find(item => {
             let p = item.first_name + '_' + item.second_name;
             return p === name;
@@ -172,7 +177,7 @@ const AllProjectionsTable = () => {
         return reduced;
       } else if (option === 3 && gameWeekCount >= 2) {
         // 2 GW
-        const tmpPlayers = Object.entries(displayedProjections).map(([name, values]) => {
+        const tmpPlayers = Object.entries(toSort).map(([name, values]) => {
           const player = combinedPlayers.find(item => {
             let p = item.first_name + '_' + item.second_name;
             return p === name;
@@ -200,7 +205,7 @@ const AllProjectionsTable = () => {
         return reduced;
       } else if (option === 4 && gameWeekCount >= 3) {
         // 3 GW
-        const tmpPlayers = Object.entries(displayedProjections).map(([name, values]) => {
+        const tmpPlayers = Object.entries(toSort).map(([name, values]) => {
           const player = combinedPlayers.find(item => {
             let p = item.first_name + '_' + item.second_name;
             return p === name;
@@ -233,7 +238,7 @@ const AllProjectionsTable = () => {
 
         return reduced;
       }
-      return displayedProjections;
+      return toSort;
     }
 
     function changePosition(e) {

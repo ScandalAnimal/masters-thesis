@@ -383,3 +383,21 @@
   padding: 10px 20px;
   justify-content: center;
 }
+
+.show-player-history {
+  display: none;
+
+  @media screen and (min-width: $screen-md) {
+    display: flex;
+  }
+}
+
+.show-player-history-alt {
+  display: flex;
+  color: $color-red;
+  justify-content: center;
+
+  @media screen and (min-width: $screen-md) {
+    display: none;
+  }
+}

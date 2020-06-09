@@ -1,7 +1,7 @@
 {
   "table.name":	"Name",
-  "table.gw": "GameWeek ahead",
-  "table.gw.plural": "GameWeeks ahead",
+  "table.gw": "ahead",
+  "table.gw.plural": "ahead",
   "table.team":	"Team",
   "table.points": "Points",
   "table.price": "Price",
@@ -85,6 +85,7 @@
   "detail.bps": "BPS",
   "detail.no": "No data available.",
   "detail.all.seasons": "All seasons",
+  "detail.more": "Historical player data available only on desktop",
 
   "team.hint": "Hint: You need to have at least 1 GK, 3 DEFs and 1 FWD at all times in the FPL. Full team must consist of 2 GKs, 5 DEFs, 5 MIDs and 3 FWDs.",
   "team.reset": "Reset changes",

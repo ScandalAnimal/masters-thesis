@@ -42,7 +42,7 @@ const Card = ({ children, title, hidden }) => {
   };
 
   return (
-    <div className='container'>
+    <div className='container card-container'>
       <div className='card board-shadow'>
         {title && (
           <div className='card__header'>

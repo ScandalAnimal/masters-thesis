@@ -8,10 +8,10 @@ function ItemList({ items }) {
   return (
     <>
       <div className='player-row player-row-heading row'>
-        <div className='col-xl-3 text-left'>{intl.messages['table.name']}</div>
-        <div className='col-xl-3 text-center'>{intl.messages['table.team']}</div>
-        <div className='col-xl-3 text-center'>{intl.messages['table.points']}</div>
-        <div className='col-xl-3 text-right'>{intl.messages['table.price']}</div>
+        <div className='col-3 text-left'>{intl.messages['table.name']}</div>
+        <div className='col-3 text-center'>{intl.messages['table.team']}</div>
+        <div className='col-3 text-center'>{intl.messages['table.points']}</div>
+        <div className='col-3 text-right'>{intl.messages['table.price']}</div>
       </div>
       {items.map((item, i) => {
         return <PlayerRow player={item} key={i} />;

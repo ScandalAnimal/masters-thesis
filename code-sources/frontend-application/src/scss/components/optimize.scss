@@ -1,5 +1,12 @@
 @import '../atoms/variables';
 
+.optimize-container {
+  @media screen and (max-width: $screen-md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .optimize-options {
   .button {
     margin-top: 15px;
@@ -16,6 +23,10 @@
   flex-direction: row;
   color: $color-white;
 
+  @media screen and (max-width: $screen-xl) {
+    padding-bottom: 2.3rem;
+  }
+
   input {
     width: auto;
     margin-right: 20px;
@@ -29,6 +40,10 @@
 .optimize-slider {
   width: 400px;
   cursor: pointer;
+
+  @media screen and (max-width: $screen-md) {
+    width: 200px;
+  }
 }
 
 .optimize-disclaimer {
